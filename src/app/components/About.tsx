@@ -163,7 +163,7 @@ const About = () => {
         @media (max-width: 767px) {
           .image-table-container {
             width: 100%; /* Full width for mobile */
-            height: 200px; /* Smaller fixed height for scrolling component on mobile */
+            height: 50vh; /* Fixed height to match text container */
             overflow: hidden;
           }
           .text-container {
@@ -184,12 +184,12 @@ const About = () => {
             padding: 2px; /* Smaller padding for mobile */
           }
           .image-item {
-            width: 100%;
-            height: 50px; /* Better mobile height */
-            min-height: 50px;
-            flex-shrink: 0;
-            margin-bottom: 2px; /* Smaller gap for mobile */
-          }
+              width: 100%;
+              aspect-ratio: 550/680; /* Maintain rectangular aspect ratio like desktop */
+              min-height: unset; /* Remove fixed min-height */
+              flex-shrink: 0;
+              margin-bottom: 2px; /* Smaller gap for mobile */
+            }
           .text-container {
             padding: 0.5rem;
           }
@@ -225,17 +225,17 @@ const About = () => {
         }
         @media (max-width: 767px) {
           .text-container {
-            width: 100%; /* Full width for mobile */
-            height: auto; /* Responsive height based on content */
-            overflow-y: auto;
-            background-image: url('/about.png');
-            background-size: cover;
-            background-position: center;
-            padding: 0.5rem;
-            display: flex; /* Ensure Flexbox for centering */
-            justify-content: center; /* Horizontal centering */
-            align-items: center; /* Vertical centering */
-          }
+              width: 100%; /* Full width for mobile */
+              height: 50vh; /* Match image container height */
+              overflow-y: auto;
+              background-image: url('/about.png');
+              background-size: cover;
+              background-position: center;
+              padding: 0.5rem;
+              display: flex; /* Ensure Flexbox for centering */
+              justify-content: center; /* Horizontal centering */
+              align-items: center; /* Vertical centering */
+            }
           .text-container p {
             font-size: 0.82rem; /* Slightly smaller for readability */
             font-family: 'Dancing Script', cursive;

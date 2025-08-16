@@ -882,7 +882,7 @@ const checkWalletStatus = async () => {
                     <span className="text-xl sm:text-2xl">💻</span>
                     <div className="text-sm sm:text-base">
                       <span className="font-bold text-[#00ffcc]">Desktop:</span>
-                      <span className="text-white ml-2">Use arrow Keys to navigate.</span>
+                      <span className="text-white ml-2">Use arrow keys/buttons.</span>
                     </div>
                   </div>)}
                   {isMobile && (

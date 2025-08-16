@@ -542,7 +542,7 @@ export default function Tracker() {
                                 </span>
                               </div>
                               {dapp.tags && dapp.tags.length > 0 && (
-                                <div className="flex items-center gap-0.5 flex-wrap">
+                                <div className="flex items-center gap-0.5 flex-wrap justify-end">
                                   {dapp.tags.map((tag, tagIndex) => (
                                     <span 
                                       key={tagIndex}
