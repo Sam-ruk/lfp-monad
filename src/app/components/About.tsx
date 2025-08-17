@@ -237,7 +237,7 @@ const About = () => {
               align-items: center; /* Vertical centering */
             }
           .text-container p {
-            font-size: 0.82rem; /* Slightly smaller for readability */
+            font-size: 1rem; /* Slightly smaller for readability */
             font-family: 'Dancing Script', cursive;
             font-weight: bold;
             color: black;

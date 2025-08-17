@@ -31,30 +31,29 @@ interface Traits {
 
 const traits: Traits = {
   Accessories: [
-    "McBox", "Dress", "Horn", "Piercing", "Headband", "Joker_Nose",
-    "Mask", "Moustache", "Sweat", "Fries", "Ankle_Tattoo", "Heel_Tattoo"
-  ],
-  Cap: ["Adidas", "Beanie", "Black", "Joker", "Red"],
+    "Piercing", "Joker_Nose", "Sweat", "Fries", "Tattoo"
+  ],//Horn
+  Cap: ["Adidas", "Beanie", "Joker", "Red", "Scarf", "Headband"],
   Eyes: ["Annoyed", "Blue", "Confused", "Cute", "Irritated", "Red", "Single"],
   Background: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33"],
   Foot: ["Foot_1", "Foot_2", "Foot_3", "Foot_4", "Foot_5", "Foot_6"],
   Glasses: ["Cool", "Heart", "Mike", "Old", "Purple", "Spectacles", "Transparent"],
   Hair: ["Hair_1", "Hair_2", "Hair_3", "Hair_4", "Hair_5", "Hair_6", "Hair_7", "Hair_8", "Hair_9", "Hair_10", "Hair_11", "Hair_12"],
-  Mouth: ["Mouth_1", "Mouth_2", "Mouth_3", "Mouth_4", "Mouth_5", "Mouth_6", "Mouth_7", "Mouth_8", "Mouth_9", "Mouth_10", "Mouth_11", "Mouth_12", "Mouth_13", "Mouth_14", "Mouth_16", "Mouth_17"],
+  Mouth: ["Mouth_1", "Mouth_2", "Mouth_3", "Mouth_4", "Mouth_5", "Mouth_6", "Mouth_7", "Mouth_8", "Mouth_9", "Mouth_10", "Mouth_11", "Mouth_12", "Mouth_13", "Mouth_14", "Mouth_15", "Mouth_16", "Mouth_17"],
   Slipper: ["Belt", "Hearts", "Lace", "Sandal", "Shiny", "Simple"]
 };
 
 const PFPs = () => {
   const [selectedTraits, setSelectedTraits] = useState<SelectedTraits>({
-    Accessories: ["Dress"],
-    Cap: "Adidas",
-    Eyes: "Annoyed",
-    Background: "1",
+    Accessories: [""],
+    Cap: "",
+    Eyes: "",
+    Background: "4",
     Foot: "Foot_1",
-    Glasses: "Cool",
-    Hair: "Hair_1",
-    Mouth: "Mouth_1",
-    Slipper: "Belt"
+    Glasses: "",
+    Hair: "",
+    Mouth: "",
+    Slipper: ""
   });
   const [backgroundColor, setBackgroundColor] = useState("#ffffff");
   const [backgroundAlpha, setBackgroundAlpha] = useState(1);
@@ -64,18 +63,15 @@ const PFPs = () => {
 
   const layerOrder: (keyof SelectedTraits | string)[] = [
     "Foot",
-    "Accessories:Heel_Tattoo",
-    "Accessories:Ankle_Tattoo",
+    "Accessories:Tattoo",
     "Slipper",
     "Mouth",
     "Hair",
     "Eyes",
-    "Accessories:Headband",
     "Cap",
     "Accessories:Others",
     "Glasses",
     "Accessories:Joker_Nose",
-    "Accessories:Mask"
   ];
   const accessoriesOrder = [
     "McBox", "Dress", "Horn", "Piercing", "Mask", "Moustache", "Sweat", "Fries"
@@ -279,32 +275,41 @@ const PFPs = () => {
   }, [backgroundColor, backgroundAlpha]);
 
   const handleRandomize = useCallback(() => {
-  const randomTraits: Partial<SelectedTraits> = {};
-  Object.entries(traits).forEach(([category, options]) => {
-    const typedCategory = category as keyof Traits;
-    const typedOptions = options as string[];
-      if (category === "Accessories") {
-        const numAccessories = Math.floor(Math.random() * 4);
-        const shuffled = [...(options as string[])].sort(() => 0.5 - Math.random());
-        randomTraits.Accessories = shuffled.slice(0, numAccessories);
-      } else {
-        randomTraits[category as Exclude<keyof SelectedTraits, "Accessories">] =
-          (options as string[])[Math.floor(Math.random() * options.length)];
-      }
-  });
+     const randomTraits: Partial<SelectedTraits> = {};
+     Object.entries(traits).forEach(([category, options]) => {
+       const typedCategory = category as keyof Traits;
+       const typedOptions = options as string[];
+       
+       if (category === "Accessories") {
+         const validOptions = typedOptions.filter(option => option && option.trim() !== "");
+         if (validOptions.length > 0) {
+           const numAccessories = 1;
+           const shuffled = [...validOptions].sort(() => 0.5 - Math.random());
+           randomTraits.Accessories = shuffled.slice(0, numAccessories);
+         } else {
+           randomTraits.Accessories = [];
+         }
+       } else {
+         const validOptions = typedOptions.filter(option => option && option.trim() !== "");
+         if (validOptions.length > 0) {
+           randomTraits[category as Exclude<keyof SelectedTraits, "Accessories">] =
+             validOptions[Math.floor(Math.random() * validOptions.length)];
+         }
+       }
+     });
 
-  const newAlpha = Math.round((0.5 + Math.random() * 0.5) * 10) / 10; // 0.5 to 1.0
+     const newAlpha = Math.round((0.5 + Math.random() * 0.5) * 10) / 10; // 0.5 to 1.0
 
-  setSelectedTraits((prev) => {
-    if (JSON.stringify(prev) === JSON.stringify(randomTraits) && backgroundAlpha === newAlpha) {
-      return prev;
-    }
-    setBackgroundAlpha(newAlpha);
-    return randomTraits as SelectedTraits; // Assert complete SelectedTraits
-  });
-}, [backgroundAlpha]);
+     setSelectedTraits((prev) => {
+       if (JSON.stringify(prev) === JSON.stringify(randomTraits) && backgroundAlpha === newAlpha) {
+         return prev;
+       }
+       setBackgroundAlpha(newAlpha);
+       return randomTraits as SelectedTraits; // Assert complete SelectedTraits
+     });
+    }, [backgroundAlpha]);
 
-  const customizationOrder = ["Foot", "Mouth", "Hair", "Eyes", "Glasses", "Slipper", "Cap", "Accessories"];
+  const customizationOrder = ["Foot", "Slipper", "Eyes", "Glasses", "Hair", "Cap", "Mouth", "Accessories"];
 
   return (
     <section id="pfp" className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
