@@ -244,6 +244,7 @@ const About = () => {
             font-weight: bold;
             color: black;
             text-align: center; /* Center text horizontally */
+            justify-content: center;
           }
         }
       `}</style>
