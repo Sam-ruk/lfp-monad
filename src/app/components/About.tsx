@@ -239,7 +239,7 @@ const About = () => {
               align-items: flex-start; /* Vertical centering */
             }
           .text-container p {
-            font-size: 0.9rem; /* Slightly smaller for readability */
+            font-size: 1.3rem; /* Slightly smaller for readability */
             font-family: 'Caveat', cursive;
             font-weight: bold;
             color: black;
