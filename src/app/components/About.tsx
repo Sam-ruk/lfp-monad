@@ -164,6 +164,9 @@ const About = () => {
           .image-table-container {
             width: 100%; /* Full width for mobile */
             height: 50vh; /* Fixed height to match text container */
+            justify-content: center;  /* centers horizontally */
+            align-items: center;      /* centers vertically */
+            text-align: center;
             overflow: hidden;
           }
           .text-container {
