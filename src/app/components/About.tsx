@@ -217,7 +217,7 @@ const About = () => {
           background-position: center; /* Center the image */
           display: flex; /* Ensure Flexbox for centering */
           justify-content: center; /* Horizontal centering */
-          align-items: flex-start; /* Vertical centering */
+          align-items: center; /* Vertical centering */
         }
         .text-container p {
           font-family: 'Caveat', cursive;
