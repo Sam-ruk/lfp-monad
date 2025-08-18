@@ -44,7 +44,6 @@ const Lore = () => {
     let lastScrollTime = 0;
 
     const handleWheel = (e: WheelEvent) => {
-      e.preventDefault(); // ✅ stops window scroll
 
       const now = Date.now();
       if (now - lastScrollTime < 700) return;
@@ -66,7 +65,6 @@ const Lore = () => {
       const delta = e.changedTouches[0].clientY - touchStartY.current;
 
       if (Math.abs(delta) > 50) {
-        e.preventDefault(); 
         if (delta > 0 && currentSlide > 0) setCurrentSlide((p) => p - 1);
         if (delta < 0 && currentSlide < slides.length - 1) setCurrentSlide((p) => p + 1);
       }
@@ -86,6 +84,25 @@ const Lore = () => {
     };
   }, [currentSlide]);
 
+  useEffect(() => {
+    if (!doorsOpen) return;
+
+    const timeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => {
+          if (prev >= slides.length - 1) return 0;
+          return prev + 1;
+        });
+      }, 2000);
+
+      // store interval cleanup inside timeout
+      return () => clearInterval(interval);
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, [doorsOpen, slides.length]);
+
+
   const handleOpenDoors = () => {
     setDoorsOpen(true);
     setCurrentSlide(0); 
@@ -94,7 +111,7 @@ const Lore = () => {
   return (
     <section id="lore" className="min-h-screen flex flex-col">
     <Heading text="LORE-MAP" className="mt-1"/>
-    <div ref={containerRef} className="mt-1 relative w-full h-[90dvh] overflow-hidden bg-black">
+    <div ref={containerRef} className="mt-1 relative w-full min-h-screen overflow-hidden bg-black">
       <AnimatePresence>
         {/* Doors Overlay */}
         <motion.div

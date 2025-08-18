@@ -239,7 +239,7 @@ const About = () => {
               padding: 0.5rem;
               display: flex; /* Ensure Flexbox for centering */
               justify-content: center; /* Horizontal centering */
-              align-items: flex-start; /* Vertical centering */
+              align-items: center; /* Vertical centering */
             }
           .text-container p {
             font-size: 1.35rem; /* Slightly smaller for readability */
