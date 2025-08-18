@@ -93,11 +93,11 @@ const Lore = () => {
           if (prev >= slides.length - 1) return 0;
           return prev + 1;
         });
-      }, 2000);
+      }, 3000);
 
       // store interval cleanup inside timeout
       return () => clearInterval(interval);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timeout);
   }, [doorsOpen, slides.length]);
