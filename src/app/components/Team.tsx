@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import React from "react";
-import { Dancing_Script } from "next/font/google";
+import { Patrick_Hand } from "next/font/google";
 import Heading from './Heading'
 
-const dancingScript = Dancing_Script({
+const dancingScript = Patrick_Hand({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400"],
 });
 
 const Team = () => {
@@ -32,7 +32,7 @@ const Team = () => {
   ];
 
   return (
-    <section id="team" className="bg-white m-0 mt-1">
+    <section id="team" className="bg-white m-0 mt-1 overflow-x-hidden">
       {/* Desktop Layout */}
       <div className="hidden md:flex w-full flex-row" style={{ height: '430px' }}>
         <div className="w-1/4" style={{ height: '430px' }}>
@@ -47,7 +47,7 @@ const Team = () => {
           />
         </div>
 
-        <div className="overflow-y-auto lg:ml-1 w-3/4 flex flex-col" style={{ height: '430px' }}>
+        <div className="overflow-y-auto lg:pl-1 w-3/4 flex flex-col" style={{ height: '430px' }}>
           <div className="w-full">
             <Heading text="OUR TEAM"/>
           </div>
@@ -75,7 +75,7 @@ const Team = () => {
                     }}
                   />
                 </div>
-                <span className={`font-bold text-black mt-1 text-center leading-tight ${dancingScript.className}`} style={{ fontSize: '12px' }}>
+                <span className={`font-bold text-black mt-1 text-center leading-tight ${dancingScript.className}`} style={{ fontSize: '15px' }}>
                   {member.name} {member.role && `(${member.role})`}
                 </span>
               </a>
@@ -109,7 +109,7 @@ const Team = () => {
                     }}
                   />
                 </div>
-                <span className={`font-bold text-black mt-1 text-center leading-tight ${dancingScript.className}`} style={{ fontSize: '12px' }}>
+                <span className={`font-bold text-black mt-1 text-center leading-tight ${dancingScript.className}`} style={{ fontSize: '15px' }}>
                   {helper.name} {helper.role && `(${helper.role})`}
                 </span>
               </a>
@@ -145,7 +145,7 @@ const Team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center flex-shrink-0"
-                style={{ width: 'calc(100vw / 7)' }}
+                style={{ width: 'calc(100% / 7)' }}
               >
                 <div className="relative drop-shadow-lg" style={{ 
                   width: 'min(40px, 10vw)', 

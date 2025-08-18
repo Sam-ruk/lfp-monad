@@ -1,131 +1,239 @@
 "use client";
-import Image from "next/image";
+import React, { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { patrick } from "../fonts";
+import Heading from './Heading'
 
-export default function Lore() {
+const Lore = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [doorsOpen, setDoorsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const touchStartY = useRef<number | null>(null);
+
+  const slides = [
+    { id: 1, bgImage: "/lore/1.png", title: "The Birth", description: "On the planet Monad, scientists ran a secret experiment and gave a foot a soul." },
+    { id: 2, bgImage: "/lore/2.png", title: "Great Escape", description: "They kept it locked in a laboratory… until one day, the foot escaped." },
+    { id: 3, bgImage: "/lore/3.png", title: "Being Found", description: "On Earth, a group of scientists discovered it and dragged it into a hidden underground lab." },
+    { id: 4, bgImage: "/lore/4.png", title: "New Looks", description: "There, they performed surgery, changed its appearance." },
+    { id: 5, bgImage: "/lore/5.png", title: "Hard to Flee", description: 'They placed the foot under “special care.”' },
+    { id: 6, bgImage: "/lore/6.png", title: "Gone Again", description: "But the foot slipped away once more and vanished into the forest." },
+    { id: 7, bgImage: "/lore/7.png", title: "To the Heavens", description: "By blasting strange frequencies, it summoned the Foot Fetish spaceship from the stars." },
+    { id: 8, bgImage: "/lore/8.png", title: "Back Home", description: "The ship carried it back to Monad—where its true story is about to begin." },
+    { id: 9, bgImage: "/lore/9.png", title: "Roadmap", description: "Follow the footsteps to reach the roadmap.." }
+  ];
+
+  // Mouse move parallax
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        setMousePosition({
+          x: ((e.clientX - rect.left) / rect.width - 0.5) * 20,
+          y: ((e.clientY - rect.top) / rect.height - 0.5) * 20,
+        });
+      }
+    };
+    const container = containerRef.current;
+    if (container) container.addEventListener("mousemove", handleMouseMove);
+    return () => container?.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  // Wheel + touch swipe handling
+  useEffect(() => {
+    let lastScrollTime = 0;
+
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault(); // ✅ stops window scroll
+
+      const now = Date.now();
+      if (now - lastScrollTime < 700) return;
+      lastScrollTime = now;
+
+      if (e.deltaY > 0 && currentSlide < slides.length - 1) {
+        setCurrentSlide((p) => p + 1);
+      } else if (e.deltaY < 0 && currentSlide > 0) {
+        setCurrentSlide((p) => p - 1);
+      }
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartY.current = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (touchStartY.current === null) return;
+      const delta = e.changedTouches[0].clientY - touchStartY.current;
+
+      if (Math.abs(delta) > 50) {
+        e.preventDefault(); 
+        if (delta > 0 && currentSlide > 0) setCurrentSlide((p) => p - 1);
+        if (delta < 0 && currentSlide < slides.length - 1) setCurrentSlide((p) => p + 1);
+      }
+      touchStartY.current = null;
+    };
+
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener("wheel", handleWheel, { passive: false }); 
+      container.addEventListener("touchstart", handleTouchStart, { passive: true });
+      container.addEventListener("touchend", handleTouchEnd, { passive: false });
+    }
+    return () => {
+      container?.removeEventListener("wheel", handleWheel);
+      container?.removeEventListener("touchstart", handleTouchStart);
+      container?.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [currentSlide]);
+
+  const handleOpenDoors = () => {
+    setDoorsOpen(true);
+    setCurrentSlide(0); 
+  };
+
   return (
-    <>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
-        rel="stylesheet"
-      />
-      <section id="lore" className="min-h-screen flex flex-col">
-        <div className="flex flex-col sm:flex-row w-full mt-1 sm:h-[400px]">
-          <div className="w-full sm:w-auto sm:flex-shrink-0 h-full">
-           <Image
-             src="/lore-left.gif"
-             alt="Lore Left Image"
-             width={400}
-             height={400}
-             style={{ width: "100%", maxWidth: "400px", height: "100%", objectFit: "cover" }}
-             className="w-full sm:w-[300px] md:w-[400px] h-full object-cover"
-             onContextMenu={(e) => e.preventDefault()}
-           />
-          </div>
-          <div
-            className="w-full sm:flex-1 flex flex-col bg-cover bg-center ml-0 sm:ml-1 mt-1 sm:mt-0"
-            style={{ backgroundImage: "url(/lore-bg.png)" }}
+    <section id="lore" className="min-h-screen flex flex-col">
+    <Heading text="LORE-MAP" className="mt-1"/>
+    <div ref={containerRef} className="mt-1 relative w-full h-[90dvh] overflow-hidden bg-black">
+      <AnimatePresence>
+        {/* Doors Overlay */}
+        <motion.div
+          key="doors-overlay"
+          className="absolute inset-0 flex items-center justify-center z-50"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: doorsOpen ? 0 : 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3, delay: doorsOpen ? 1.5 : 0 }}
+        >
+          {/* Left Door */}
+          <motion.div
+            className="absolute left-0 top-0 h-full w-1/2"
+            style={{
+              backgroundImage: "url(/lore/door-l.png)",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "right center",
+            }}
+            initial={{ x: 0 }}
+            animate={{ x: doorsOpen ? "-100%" : 0 }}
+            transition={{ 
+              duration: 1.5, 
+              ease: [0.25, 0.46, 0.45, 0.94], // Custom cubic-bezier for smooth motion
+              delay: 0
+            }}
+          />
+
+          {/* Right Door */}
+          <motion.div
+            className="absolute right-0 top-0 h-full w-1/2"
+            style={{
+              backgroundImage: "url(/lore/door-r.png)",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "left center",
+            }}
+            initial={{ x: 0 }}
+            animate={{ x: doorsOpen ? "100%" : 0 }}
+            transition={{ 
+              duration: 1.5, 
+              ease: [0.25, 0.46, 0.45, 0.94], // Custom cubic-bezier for smooth motion
+              delay: 0
+            }}
+          />
+
+          <motion.button
+            className={`${patrick.className} relative z-50 px-10 py-4 bg-purple-400/80 text-white font-bold text-2xl rounded-full shadow-lg hover:scale-105 transition-transform`}
+            onClick={handleOpenDoors}
+            initial={{ scale: 0 }}
+            animate={{ scale: doorsOpen ? 0 : 1 }}
+            whileHover={{ scale: doorsOpen ? 0 : 1.1 }}
+            transition={{ duration: 0.5 }}
           >
-            <div className="flex flex-col sm:flex-row w-full h-1/2 lg:ml-2">
-              <p
-                className="sm:w-2/3 w-full text-base sm:text-sm md:text-xl font-bold leading-relaxed px-5 py-0 flex items-center text-justify font-serif text-white"
-                style={{ fontFamily: "Dancing Script, cursive", color: "#ffffff" }}
-              >
-                In the House of Moyaki group chat, King Loui’s feet were mentioned, 
-                Loui shared a photo, and Behnaz sketched it—just for laughs. 
-                That doodle turned into “Loui Feet Pic” (LFP), which later evolved into “Lost Feet Pics”.
-              </p>
-              <div className="sm:w-1/3 w-full flex items-center justify-center p-2 lg:mt-20">
-                <a href="https://x.com/KinglouiEth/status/1813234778541310164" target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src="/lore-right-1.png"
-                    alt="Paragraph 1 Image"
-                    width={200}
-                    height={220}
-                    style={{ width: '200px', height: 'auto' }}
-                    className="object-cover rounded-lg shadow-md shadow-[#ffffff]"
-                    priority
-                    onContextMenu={(e) => e.preventDefault()}
-                  />
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row w-full h-1/2 mb-2 lg:ml-2">
-              <p
-                className="sm:w-2/3 w-full text-base sm:text-sm md:text-xl font-bold leading-relaxed px-5 py-0 flex items-center text-justify font-serif text-white"
-                style={{ fontFamily: "Dancing Script, cursive", color: "#ffffff" }}
-              >
-                The group loved it. Behnaz made more designs, then a sticker pack. 
-                King Loui suggested her to create a full collection. 
-                Soon, she started giving these feet personalities—drawing inspiration from Monad’s early icons.
-              </p>
-              <div className="sm:w-1/3 w-full flex items-center justify-center p-2 lg:mt-10">
-                <a href="https://x.com/keoneHD/status/1896253904561815740" target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src="/lore-right-2.png"
-                    alt="Paragraph 2 Image"
-                    width={200}
-                    height={250}
-                    style={{ width: '200px', height: 'auto' }}
-                    className="object-cover rounded-lg shadow-md shadow-[#ffffff]"
-                    priority
-                    onContextMenu={(e) => e.preventDefault()}
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col sm:flex-row w-full mt-1 sm:h-[400px]">
-          <div
-            className="w-full sm:flex-1 flex flex-col bg-cover bg-center"
-            style={{ backgroundImage: "url(/lore-bg.png)" }}
+            Exp-LORE
+          </motion.button>
+        </motion.div>
+
+        {doorsOpen && (
+          <motion.div 
+            key="story-content"
+            className="absolute inset-0 w-full h-full"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <div className="flex flex-col sm:flex-row w-full h-1/2">
-              <p
-                className="sm:w-2/3 w-full text-base sm:text-sm md:text-xl font-bold leading-relaxed px-5 py-0 flex items-center text-justify font-serif text-white"
-                style={{ fontFamily: "Dancing Script, cursive", color: "#ffffff" }}
+            {/* Background Slides */}
+            {slides.map((slide, index) => (
+              <motion.div
+                key={slide.id}
+                className="absolute inset-0 w-full h-full"
+                animate={{ opacity: index === currentSlide ? 1 : 0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                style={{
+                  backgroundImage: `url(${slide.bgImage})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  willChange: "opacity, transform",
+                  pointerEvents: index === currentSlide ? "auto" : "none", 
+                }}
               >
-                But then, life hit and LFP went quiet. 
-                Months later, Keone’s 1K Nads List reignited the fire. 
-                Behnaz jumped back in, registered LFP for Mach2 (Monad NFT Accelerator program), and started building again.
-              </p>
-              <div className="sm:w-1/3 w-full flex items-center justify-center p-2 lg:mt-46">
-                 <a href="https://x.com/Lfp_monad/status/1884345435721994316" target="_blank" rel="noopener noreferrer">
-                   <Image
-                     src="/lore-left-1.jpeg"
-                     alt="Paragraph 3 Image"
-                     width={200}
-                     height={300}
-                     className="w-[150px] h-[200px] sm:w-[200px] sm:h-[250px] lg:w-[180px] lg:h-[230px] object-cover rounded-lg shadow-lg shadow-[#ffffff]"
-                     priority
-                     onContextMenu={(e) => e.preventDefault()}
-                   />
-                 </a>
-                </div>
+                <div className="absolute inset-0 bg-purple-900/50"></div>
+              </motion.div>
+            ))}
+
+            {/* Floating Parallax Layer */}
+            <motion.div
+              className="absolute right-[15%] top-1/3 hidden md:block z-10"
+              animate={{
+                x: mousePosition.x * -1.2,
+                y: mousePosition.y * -1.5,
+                rotateY: mousePosition.x * 0.3,
+                rotateX: mousePosition.y * -0.2,
+              }}
+              transition={{ type: "spring", stiffness: 80, damping: 20 }}
+            />
+
+            {/* Content */}
+            <div className="relative z-20 h-full flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`slide-${slides[currentSlide].id}-content`}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                >
+                  <h1
+                    className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white whitespace-pre-line leading-[0.9] mt-4"
+                    style={{ textShadow: "0 10px 40px rgba(0,0,0,0.8)" }}
+                  >
+                    {slides[currentSlide].title}
+                  </h1>
+                  <p
+                    className={`${patrick.className} mt-6 max-w-xl mx-auto text-white text-xl md:text-4xl leading-loose`}
+                    style={{ textShadow: "0 2px 8px rgba(0, 0, 0, 0.7)" }}
+                  >
+                    {slides[currentSlide].description}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
             </div>
-            <div className="flex flex-col sm:flex-row w-full h-1/2 mb-2">
-              <p
-                className="sm:w-2/3 w-full text-base sm:text-sm md:text-xl font-bold leading-relaxed px-5 py-0 flex items-center text-justify font-serif text-white"
-                style={{ fontFamily: "Dancing Script, cursive", color: "#ffffff" }}
-              >
-                Soon after, they met Alex—completing the team. 
-                What began as a joke in a group chat is now a growing NFT collection on Monad—Lost Feet Pics.
-              </p>
+
+            {/* Dots Navigation */}
+            <div className="absolute bottom-6 right-6 z-[60] flex flex-col items-center space-y-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? "bg-white" : "bg-white/30"} hover:bg-white/70`}
+                />
+              ))}
             </div>
-          </div>
-          <div className="w-full sm:w-auto sm:flex-shrink-0 h-full mt-1 sm:mt-0 ml-0 sm:ml-1">
-           <Image
-             src="/lore-right.gif"
-             alt="Lore Right Image"
-             width={400}
-             height={400}
-             style={{ width: "100%", maxWidth: "400px", height: "100%", objectFit: "cover" }}
-             className="w-full sm:w-[300px] md:w-[400px] h-full object-cover"
-             onContextMenu={(e) => e.preventDefault()}
-           />
-          </div>
-        </div>
-      </section>
-    </>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+    </section>
   );
-}
+};
+
+export default Lore;

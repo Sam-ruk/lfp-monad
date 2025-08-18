@@ -119,7 +119,7 @@ const About = () => {
           }
         }
         .image-table-container {
-          height: 66.67vh; /* 2/3 of viewport height for desktop */
+          height: 70vh; /* 2/3 of viewport height for desktop */
           overflow: hidden; /* Hide overflow to prevent visible seams */
           width: 60%; /* Narrower as per previous request */
         }
@@ -207,22 +207,24 @@ const About = () => {
         }
         .text-container {
           width: 40%; /* Adjusted to fill remaining space */
-          height: 66.67vh; /* Match image-table-container height on desktop */
+          height: 70vh; /* Match image-table-container height on desktop */
           overflow-y: auto; /* Allow scrolling if text overflows */
           background-image: url('/about.png'); /* Background image */
           background-size: cover; /* Scale to fill container */
           background-position: center; /* Center the image */
           display: flex; /* Ensure Flexbox for centering */
           justify-content: center; /* Horizontal centering */
-          align-items: center; /* Vertical centering */
+          align-items: flex-start; /* Vertical centering */
         }
         .text-container p {
-          font-family: 'Dancing Script', cursive; /* Dancing Script font */
-          font-size: 1.18rem; /* Tailwind text-base */
-          font-weight: bold; /* Bold text */
-          color: black; /* Black text */
-          text-align: center; /* Center text horizontally */
+          font-family: 'Caveat', cursive;
+          font-size: 1.35rem;    /* ⬅ bigger text */
+          font-weight: 900;     /* ⬅ extra bold (range: 100–900) */
+          color: black;
+          text-align: center;
+          letter-spacing: 1.5px;
         }
+
         @media (max-width: 767px) {
           .text-container {
               width: 100%; /* Full width for mobile */
@@ -234,11 +236,11 @@ const About = () => {
               padding: 0.5rem;
               display: flex; /* Ensure Flexbox for centering */
               justify-content: center; /* Horizontal centering */
-              align-items: center; /* Vertical centering */
+              align-items: flex-start; /* Vertical centering */
             }
           .text-container p {
-            font-size: 1rem; /* Slightly smaller for readability */
-            font-family: 'Dancing Script', cursive;
+            font-size: 0.9rem; /* Slightly smaller for readability */
+            font-family: 'Caveat', cursive;
             font-weight: bold;
             color: black;
             text-align: center; /* Center text horizontally */
@@ -286,16 +288,16 @@ const About = () => {
               </div>
             )}
           </div>
-            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
                       
             <div className="text-container flex justify-center items-center p-4 md:p-8 lg:ml-1">
-              <div className="max-w-lg flex flex-col items-center mt-11">
-                <p className="text-md font-bold text-black font-dancing text-center">
-                  Step into LFP, the Hairiest Feet Collection, where every foot tells a story—fluffy, unique, and full of character.
+              <div className="max-w-lg flex flex-col items-center mt-2 overflow-off">
+                <p className="text-lg font-bold text-black font-dancing text-center">
+                  The Hairiest Feet Collection, where every foot tells a story—fluffy, unique, and full of character.
                   <br /><br />
-                  A tribute to the charm of feet pics, LFP blends humor, artistry, and a touch of mystery in each piece.
+                  A tribute to the charm of feet pics with a touch of mystery in each piece.
                   <br /><br />
-                  Join the movement, embrace the fluff, and be part of the LFP legacy!
+                  Embrace the fluff and be part of the LFP legacy!
                 </p>
               </div>
             </div>

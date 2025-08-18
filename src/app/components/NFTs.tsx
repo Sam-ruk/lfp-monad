@@ -35,7 +35,7 @@ const NFTs = () => {
                 alt={image.alt}
                 width={400}
                 height={400}
-                className="w-full lg:h-80 object-cover hover:opacity-90 transition-opacity"
+                className="w-full h-full object-cover hover:opacity-90 transition-opacity"
               />
             </a>
           ))}

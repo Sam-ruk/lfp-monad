@@ -83,19 +83,19 @@ export default function Navbar() {
             onClick={() => scrollToSection("lore")}
             className="text-white font-semibold px-3 py-1 rounded hover:bg-gray-700 transition"
           >
-            Lore
+            Lore-Map
+          </button>
+          <button
+            onClick={() => scrollToSection("backstory")}
+            className="text-white font-semibold px-3 py-1 rounded hover:bg-gray-700 transition"
+          >
+            Backstory
           </button>
           <button
             onClick={() => scrollToSection("team")}
             className="text-white font-semibold px-3 py-1 rounded hover:bg-gray-700 transition"
           >
             Team
-          </button>
-          <button
-            onClick={() => scrollToSection("roadmap")}
-            className="text-white font-semibold px-3 py-1 rounded hover:bg-gray-700 transition"
-          >
-            Roadmap
           </button>
         </div>
 
@@ -136,19 +136,19 @@ export default function Navbar() {
                 onClick={() => scrollToSection("lore")}
                 className="text-white font-semibold px-3 py-1 rounded hover:bg-gray-700 transition"
               >
-                Lore
+                Lore-Map
+              </button>
+              <button
+                onClick={() => scrollToSection("backstory")}
+                className="text-white font-semibold px-3 py-1 rounded hover:bg-gray-700 transition"
+              >
+                Backstory
               </button>
               <button
                 onClick={() => scrollToSection("team")}
                 className="text-white font-semibold px-3 py-1 rounded hover:bg-gray-700 transition"
               >
                 Team
-              </button>
-              <button
-                onClick={() => scrollToSection("roadmap")}
-                className="text-white font-semibold px-3 py-1 rounded hover:bg-gray-700 transition"
-              >
-                Roadmap
               </button>
             </div>
           </div>

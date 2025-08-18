@@ -3,11 +3,11 @@ import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import About from "./components/About";
 import NFTs from "./components/NFTs";
-import Lore from "./components/Lore";
+import Backstory from "./components/Backstory";
 import Team from "./components/Team";
-import Roadmap from "./components/Roadmap";
 import PFPs from "./components/PFPs";
 import Game from './components/Game';
+import Lore from './components/Lore';
 import Tracker from './components/Tracker';
 import "./globals.css";
 
@@ -23,8 +23,8 @@ export default function Home() {
         <Game />
         <Tracker />
         <Lore />
+        <Backstory />
         <Team />
-        <Roadmap />
       </main>
     </div>
   );

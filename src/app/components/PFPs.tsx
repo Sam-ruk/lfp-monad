@@ -31,15 +31,16 @@ interface Traits {
 
 const traits: Traits = {
   Accessories: [
-    "Piercing", "Joker_Nose", "Sweat", "Fries", "Tattoo"
-  ],//Horn
-  Cap: ["Adidas", "Beanie", "Joker", "Red", "Scarf", "Headband"],
+    "McBox", "Dress", "Horn", "Piercing", "Headband", "Joker_Nose",
+    "Mask", "Moustache", "Sweat", "Fries", "Ankle_Tattoo", "Heel_Tattoo"
+  ],
+  Cap: ["Adidas", "Beanie", "Black", "Joker", "Red"],
   Eyes: ["Annoyed", "Blue", "Confused", "Cute", "Irritated", "Red", "Single"],
   Background: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33"],
   Foot: ["Foot_1", "Foot_2", "Foot_3", "Foot_4", "Foot_5", "Foot_6"],
   Glasses: ["Cool", "Heart", "Mike", "Old", "Purple", "Spectacles", "Transparent"],
   Hair: ["Hair_1", "Hair_2", "Hair_3", "Hair_4", "Hair_5", "Hair_6", "Hair_7", "Hair_8", "Hair_9", "Hair_10", "Hair_11", "Hair_12"],
-  Mouth: ["Mouth_1", "Mouth_2", "Mouth_3", "Mouth_4", "Mouth_5", "Mouth_6", "Mouth_7", "Mouth_8", "Mouth_9", "Mouth_10", "Mouth_11", "Mouth_12", "Mouth_13", "Mouth_14", "Mouth_15", "Mouth_16", "Mouth_17"],
+  Mouth: ["Mouth_1", "Mouth_2", "Mouth_3", "Mouth_4", "Mouth_5", "Mouth_6", "Mouth_7", "Mouth_8", "Mouth_9", "Mouth_10", "Mouth_11", "Mouth_12", "Mouth_13", "Mouth_14", "Mouth_16", "Mouth_17"],
   Slipper: ["Belt", "Hearts", "Lace", "Sandal", "Shiny", "Simple"]
 };
 
@@ -48,7 +49,7 @@ const PFPs = () => {
     Accessories: [""],
     Cap: "",
     Eyes: "",
-    Background: "4",
+    Background: "7",
     Foot: "Foot_1",
     Glasses: "",
     Hair: "",
@@ -63,15 +64,20 @@ const PFPs = () => {
 
   const layerOrder: (keyof SelectedTraits | string)[] = [
     "Foot",
-    "Accessories:Tattoo",
+    "Accessories:Heel_Tattoo",
+    "Accessories:Ankle_Tattoo",
     "Slipper",
     "Mouth",
     "Hair",
     "Eyes",
+    "Accessories:Headband",
     "Cap",
     "Accessories:Others",
+    "Accessories:Dress",
+    "Accessories:McBox",
     "Glasses",
     "Accessories:Joker_Nose",
+    "Accessories:Mask"
   ];
   const accessoriesOrder = [
     "McBox", "Dress", "Horn", "Piercing", "Mask", "Moustache", "Sweat", "Fries"
@@ -275,44 +281,35 @@ const PFPs = () => {
   }, [backgroundColor, backgroundAlpha]);
 
   const handleRandomize = useCallback(() => {
-     const randomTraits: Partial<SelectedTraits> = {};
-     Object.entries(traits).forEach(([category, options]) => {
-       const typedCategory = category as keyof Traits;
-       const typedOptions = options as string[];
-       
-       if (category === "Accessories") {
-         const validOptions = typedOptions.filter(option => option && option.trim() !== "");
-         if (validOptions.length > 0) {
-           const numAccessories = 1;
-           const shuffled = [...validOptions].sort(() => 0.5 - Math.random());
-           randomTraits.Accessories = shuffled.slice(0, numAccessories);
-         } else {
-           randomTraits.Accessories = [];
-         }
-       } else {
-         const validOptions = typedOptions.filter(option => option && option.trim() !== "");
-         if (validOptions.length > 0) {
-           randomTraits[category as Exclude<keyof SelectedTraits, "Accessories">] =
-             validOptions[Math.floor(Math.random() * validOptions.length)];
-         }
-       }
-     });
+  const randomTraits: Partial<SelectedTraits> = {};
+  Object.entries(traits).forEach(([category, options]) => {
+    const typedCategory = category as keyof Traits;
+    const typedOptions = options as string[];
+      if (category === "Accessories") {
+        const numAccessories = 1;
+        const shuffled = [...(options as string[])].sort(() => 0.5 - Math.random());
+        randomTraits.Accessories = shuffled.slice(0, numAccessories);
+      } else {
+        randomTraits[category as Exclude<keyof SelectedTraits, "Accessories">] =
+          (options as string[])[Math.floor(Math.random() * options.length)];
+      }
+  });
 
-     const newAlpha = Math.round((0.5 + Math.random() * 0.5) * 10) / 10; // 0.5 to 1.0
+  const newAlpha = Math.round((0.5 + Math.random() * 0.5) * 10) / 10; // 0.5 to 1.0
 
-     setSelectedTraits((prev) => {
-       if (JSON.stringify(prev) === JSON.stringify(randomTraits) && backgroundAlpha === newAlpha) {
-         return prev;
-       }
-       setBackgroundAlpha(newAlpha);
-       return randomTraits as SelectedTraits; // Assert complete SelectedTraits
-     });
-    }, [backgroundAlpha]);
+  setSelectedTraits((prev) => {
+    if (JSON.stringify(prev) === JSON.stringify(randomTraits) && backgroundAlpha === newAlpha) {
+      return prev;
+    }
+    setBackgroundAlpha(newAlpha);
+    return randomTraits as SelectedTraits; // Assert complete SelectedTraits
+  });
+}, [backgroundAlpha]);
 
-  const customizationOrder = ["Foot", "Slipper", "Eyes", "Glasses", "Hair", "Cap", "Mouth", "Accessories"];
+  const customizationOrder = ["Foot", "Mouth", "Hair", "Eyes", "Glasses", "Slipper", "Cap", "Accessories"];
 
   return (
-    <section id="pfp" className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
+<section id="pfp" className="min-h-screen sm:min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
     <Heading text="PFP GENERATOR" className="mt-1"/>
       <div className="max-w-7xl mx-auto mt-1">
         <div className="flex flex-col sm:flex-row gap-8 items-start p-4 sm:p-6 lg:p-8">
@@ -352,7 +349,7 @@ const PFPs = () => {
 
           {/* Right: Customization Options */}
           <div className="w-full sm:w-1/2 xl:w-3/5">
-            <div className="bg-white rounded-2xl p-6 shadow-xl flex flex-col h-[200px] sm:h-[calc(400px+2rem+80px)] overflow-y-auto">
+            <div className="bg-white rounded-2xl p-6 shadow-xl flex flex-col h-[60vh] sm:h-[calc(400px+2rem+80px)] overflow-y-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gray-50 rounded-xl p-2 md:col-span-2">
                   <h3 className="text-sm sm:text-lg font-semibold text-gray-700 mb-4 flex items-center">
@@ -413,7 +410,7 @@ const PFPs = () => {
                         />
                         <button
                           onClick={() => setSelectedTraits(prev => ({ ...prev, Background: "" }))}
-                          className="px-3 py-2 text-sm bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors"
+                          className="px-3 py-2 text-sm bg-gradient-to-r from-red-500 to-pink-500 text-white hover:bg-gray-300 rounded-lg transition-colors"
                         >
                           Use Color
                         </button>
@@ -507,13 +504,13 @@ const PFPs = () => {
                 ))}
               </div>
 
-              {imageErrors.size > 0 && (
+              {/*imageErrors.size > 0 && (
                 <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                   <p className="text-yellow-800 text-sm">
                     ⚠️ Some images couldn't be loaded. This might be due to missing files or incorrect naming conventions.
                   </p>
                 </div>
-              )}
+              )*/}
             </div>
           </div>
         </div>
