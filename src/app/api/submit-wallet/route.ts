@@ -82,8 +82,8 @@ export async function POST(req: NextRequest) {
 
     const decimals = await tokenContract.methods.decimals().call();
     
-    // Calculate amount (10 tokens)
-    const amount = BigInt(10) * BigInt(10) ** BigInt(Number(decimals));
+    // Calculate amount (1M tokens)
+    const amount = BigInt(1000000) * BigInt(10) ** BigInt(Number(decimals));
 
     const gasPrice = await web3.eth.getGasPrice();
     const gasEstimate = await tokenContract.methods

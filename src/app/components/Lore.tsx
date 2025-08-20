@@ -93,7 +93,7 @@ const Lore = () => {
           if (prev >= slides.length - 1) return 0;
           return prev + 1;
         });
-      }, 6000);
+      }, 8000);
 
       // store interval cleanup inside timeout
       return () => clearInterval(interval);
