@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,18 +21,18 @@ export const metadata: Metadata = {
     type: "website",
     title: "LFP Monad",
     description: "Lost Feet Pics on Monad.",
-    images: ["/logo.png"], 
+    images: ["/logo.png"],
     url: "https://lfp-monad.xyz",
   },
   twitter: {
-    card: "summary_large_image", 
+    card: "summary_large_image",
     title: "LFP Monad",
     description: "Lost Feet Pics on Monad.",
-    images: ["/logo.png"], 
+    images: ["/logo.png"],
   },
   icons: {
     icon: [
-      { url: "/logo.png", sizes: "400x400", type: "image/png" }, 
+      { url: "/logo.png", sizes: "400x400", type: "image/png" },
     ],
     apple: "/logo.png",
   },
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
