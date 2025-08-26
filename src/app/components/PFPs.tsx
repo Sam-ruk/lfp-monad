@@ -125,99 +125,100 @@ const PFPs = () => {
   }, []);
 
   useDeepCompareEffect(() => {
-    const renderCanvas = async () => {
-      const canvas = canvasRef.current;
-      if (!canvas) return;
+  const renderCanvas = async () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-      const dpr = window.devicePixelRatio || 1;
-      canvas.width = 400 * dpr;
-      canvas.height = 400 * dpr;
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return; // Add null check for ctx
-      ctx.scale(dpr, dpr);
-      ctx.imageSmoothingEnabled = false;
+    const canvasSize = 1461;
+    canvas.width = canvasSize;
+    canvas.height = canvasSize;
+    
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
 
-      ctx.clearRect(0, 0, 400, 400);
+    ctx.clearRect(0, 0, canvasSize, canvasSize);
 
-      if (selectedTraits.Background) {
-        let bgImgSrc = getImagePath("Background", selectedTraits.Background, false);
-        let bgImg = await loadImage(bgImgSrc);
-        
-        if (bgImg) {
-          ctx.globalAlpha = backgroundAlpha;
-          ctx.drawImage(bgImg, 0, 0, 400, 400);
-          ctx.globalAlpha = 1; // Reset alpha
-        } else {
-          // Fallback to color
-          const rgbColor = hexToRgb(backgroundColor);
-          ctx.fillStyle = `rgba(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}, ${backgroundAlpha})`;
-          ctx.fillRect(0, 0, 400, 400);
-        }
+    // Background 
+    if (selectedTraits.Background) {
+      let bgImgSrc = getImagePath("Background", selectedTraits.Background, false);
+      let bgImg = await loadImage(bgImgSrc);
+      
+      if (bgImg) {
+        ctx.globalAlpha = backgroundAlpha;
+        ctx.drawImage(bgImg, 0, 0, canvasSize, canvasSize);
+        ctx.globalAlpha = 1;
       } else {
-        // Use color background
         const rgbColor = hexToRgb(backgroundColor);
         ctx.fillStyle = `rgba(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}, ${backgroundAlpha})`;
-        ctx.fillRect(0, 0, 400, 400);
+        ctx.fillRect(0, 0, canvasSize, canvasSize);
       }
+    } else {
+      const rgbColor = hexToRgb(backgroundColor);
+      ctx.fillStyle = `rgba(${rgbColor.r}, ${rgbColor.g}, ${rgbColor.b}, ${backgroundAlpha})`;
+      ctx.fillRect(0, 0, canvasSize, canvasSize);
+    }
 
-      const drawLayers = async () => {
-        for (const layer of layerOrder) {
-          if (layer.startsWith("Accessories:")) {
-            const accessory = layer.split(":")[1];
-            if (accessory === "Others") {
-              for (const acc of accessoriesOrder) {
-                if (selectedTraits.Accessories.includes(acc)) {
-                  let imgSrc = getImagePath("Accessories", acc, false);
-                  let img = await loadImage(imgSrc);
+    const drawLayers = async () => {
+      for (const layer of layerOrder) {
+        if (layer.startsWith("Accessories:")) {
+          const accessory = layer.split(":")[1];
+          if (accessory === "Others") {
+            for (const acc of accessoriesOrder) {
+              if (selectedTraits.Accessories.includes(acc)) {
+                let imgSrc = getImagePath("Accessories", acc, false);
+                let img = await loadImage(imgSrc);
 
-                  if (!img) {
-                    imgSrc = getImagePath("Accessories", acc, true);
-                    img = await loadImage(imgSrc);
-                  }
+                if (!img) {
+                  imgSrc = getImagePath("Accessories", acc, true);
+                  img = await loadImage(imgSrc);
+                }
 
-                  if (img) {
-                    ctx.drawImage(img, 0, 0, 400, 400);
-                  }
+                if (img) {
+                  ctx.drawImage(img, 0, 0, canvasSize, canvasSize);
                 }
               }
-            } else if (selectedTraits.Accessories.includes(accessory)) {
-              let imgSrc = getImagePath("Accessories", accessory, false);
-              let img = await loadImage(imgSrc);
-
-              if (!img) {
-                imgSrc = getImagePath("Accessories", accessory, true);
-                img = await loadImage(imgSrc);
-              }
-
-              if (img) {
-                ctx.drawImage(img, 0, 0, 400, 400);
-              }
             }
-          } else {
-            const key = layer as keyof SelectedTraits;
-            const value = selectedTraits[key];
-            if (typeof value === "string" && value) { // Add type guard
-              let imgSrc = getImagePath(layer, value, false);
-              let img = await loadImage(imgSrc);
+          } else if (selectedTraits.Accessories.includes(accessory)) {
+            let imgSrc = getImagePath("Accessories", accessory, false);
+            let img = await loadImage(imgSrc);
 
-              if (!img) {
-                imgSrc = getImagePath(layer, value, true);
-                img = await loadImage(imgSrc);
-              }
+            if (!img) {
+              imgSrc = getImagePath("Accessories", accessory, true);
+              img = await loadImage(imgSrc);
+            }
 
-              if (img) {
-                ctx.drawImage(img, 0, 0, 400, 400);
-              }
+            if (img) {
+              ctx.drawImage(img, 0, 0, canvasSize, canvasSize);
+            }
+          }
+        } else {
+          const key = layer as keyof SelectedTraits;
+          const value = selectedTraits[key];
+          if (typeof value === "string" && value) {
+            let imgSrc = getImagePath(layer, value, false);
+            let img = await loadImage(imgSrc);
+
+            if (!img) {
+              imgSrc = getImagePath(layer, value, true);
+              img = await loadImage(imgSrc);
+            }
+
+            if (img) {
+              ctx.drawImage(img, 0, 0, canvasSize, canvasSize);
             }
           }
         }
-      };
-
-      await drawLayers();
+      }
     };
 
-    renderCanvas();
-  }, [selectedTraits, backgroundColor, backgroundAlpha, loadImage, getImagePath, hexToRgb]);
+    await drawLayers();
+  };
+
+  renderCanvas();
+}, [selectedTraits, backgroundColor, backgroundAlpha, loadImage, getImagePath, hexToRgb]);
 
   const handleTraitChange = useCallback((category: keyof SelectedTraits, value: string) => {
     setSelectedTraits((prev) => {
@@ -318,9 +319,14 @@ const PFPs = () => {
             <div className="relative w-full max-w-md">
               <canvas
                 ref={canvasRef}
-                width={400}
-                height={400}
+                width={1461}
+                height={1461}
                 className="w-full h-auto rounded-2xl border-4 border-white shadow-2xl bg-white"
+                style={{ 
+                  maxWidth: '100%',
+                  height: 'auto',
+                  imageRendering: 'high-quality' 
+                }}
               />
             </div>
 

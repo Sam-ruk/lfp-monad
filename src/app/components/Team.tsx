@@ -13,7 +13,7 @@ const dancingScript = Patrick_Hand({
 const Team = () => {
   const teamMembers = [
     { name: "Behnaz", url: "https://x.com/0xBehnaZ1", image: "https://pbs.twimg.com/profile_images/1883575474544107520/fv_T6_PJ_400x400.jpg", role: "" },
-    { name: "Nobody", url: "https://x.com/NobodyARB", image: "https://pbs.twimg.com/profile_images/1889801538563973120/5my9bXGc_400x400.jpg", role: "" },
+    { name: "Nobody", url: "https://x.com/NobodyARB", image: "https://pbs.twimg.com/profile_images/1957557250651836417/T-S6jt5s_400x400.jpg", role: "" },
     { name: "Alex", url: "https://x.com/velicko_aleksej", image: "https://pbs.twimg.com/profile_images/1691710013029470208/qcMirJeI_400x400.jpg", role: "" },
     { name: "Arkar", url: "https://x.com/CoCa14740177", image: "https://pbs.twimg.com/profile_images/1935776785154629632/6miKh8xb_400x400.jpg" },
     { name: "Ihsan", url: "https://x.com/ihsan00333", image: "https://pbs.twimg.com/profile_images/1926024164449656833/c9S49fMr_400x400.jpg", role: "" },
