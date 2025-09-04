@@ -333,19 +333,19 @@ const PFPs = () => {
             <div className="no-scrollbar flex flex-nowrap gap-2 mt-4 justify-center">
               <button
                 onClick={handleDownload}
-                className="px-2 py-1 sm:px-6 sm:py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs sm:text-base font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="px-2 py-1 sm:px-6 sm:py-3 text-white text-xs sm:text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 bg-cover bg-[url('/heading.png')] bg-[position:0%_0%] hover:brightness-110 relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/40 before:to-purple-300/40 before:bg-opacity-50 before:backdrop-blur-sm before:z-[-1] text-shadow-[1px_1px_3px_rgba(0,0,0,0.9),2px_2px_4px_rgba(0,0,0,0.7)]"
               >
                 Download
               </button>
               <button
                 onClick={handleRandomize}
-                className="px-2 py-1 sm:px-6 sm:py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs sm:text-base font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="px-2 py-1 sm:px-6 sm:py-3 text-white text-xs sm:text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 bg-cover bg-[url('/heading.png')] bg-[position:20%_20%] hover:brightness-110 relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-400/40 before:to-pink-600/40 before:bg-opacity-50 before:backdrop-blur-sm before:z-[-1] text-shadow-[1px_1px_3px_rgba(0,0,0,0.9),2px_2px_4px_rgba(0,0,0,0.7)]"
               >
                 Randomize
               </button>
               <button
                 onClick={handleReset}
-                className="px-2 py-1 sm:px-6 sm:py-3 bg-gradient-to-r from-gray-500 to-gray-600 text-white text-xs sm:text-base font-semibold rounded-xl hover:from-gray-600 hover:to-gray-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="px-2 py-1 sm:px-6 sm:py-3 text-white text-xs sm:text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 bg-cover bg-[url('/heading.png')] bg-[position:10%_10%] hover:brightness-110 relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-400/40 before:to-cyan-300/40 before:bg-opacity-50 before:backdrop-blur-sm before:z-[-1] text-shadow-[1px_1px_3px_rgba(0,0,0,0.9),2px_2px_4px_rgba(0,0,0,0.7)]"
               >
                 Reset
               </button>
@@ -358,7 +358,7 @@ const PFPs = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gray-50 rounded-xl p-2 md:col-span-2">
                   <h3 className="text-sm sm:text-lg font-semibold text-gray-700 mb-4 flex items-center">
-                    🖼️ Background
+                    Background
                   </h3>
                   
                   {/* Background Images Grid */}
@@ -407,15 +407,33 @@ const PFPs = () => {
                     <div>
                       <p className="text-sm text-gray-600 mb-2">Solid Color:</p>
                       <div className="flex items-center gap-4">
-                        <input
-                          type="color"
-                          value={backgroundColor}
-                          onChange={handleColorChange}
-                          className="w-10 h-10 rounded-lg border-2 border-gray-200 cursor-pointer shadow-md"
-                        />
+                        <div className="relative inline-block">
+                          <input
+                            type="color"
+                            value={backgroundColor}
+                            onChange={handleColorChange}
+                            className="absolute w-10 h-10 opacity-0 cursor-pointer"
+                            style={{
+                              WebkitAppearance: 'none',
+                              MozAppearance: 'none',
+                              appearance: 'none',
+                              padding: 0,
+                              margin: 0,
+                            }}
+                          />
+                          <div
+                            onClick={() => document.querySelector('input[type="color"]').click()}
+                            className="w-10 h-10 rounded-lg border-2 border-gray-200 cursor-pointer shadow-md"
+                            style={{
+                              background: backgroundColor,
+                              borderRadius: '0.5rem',
+                              display: 'block',
+                            }}
+                          ></div>
+                        </div>
                         <button
                           onClick={() => setSelectedTraits(prev => ({ ...prev, Background: "" }))}
-                          className="px-3 py-2 text-sm bg-gradient-to-r from-red-500 to-pink-500 text-white hover:bg-gray-300 rounded-lg transition-colors"
+                          className="px-3 py-2 text-white text-sm font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 bg-cover bg-[url('/heading.png')] bg-[position:100%_100%] hover:brightness-110 relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-600/40 before:to-pink-500/40 before:bg-opacity-50 before:backdrop-blur-sm before:z-[-1] text-shadow-[1px_1px_3px_rgba(0,0,0,0.9),2px_2px_4px_rgba(0,0,0,0.7)]"
                         >
                           Use Color
                         </button>
@@ -447,9 +465,9 @@ const PFPs = () => {
                 {customizationOrder.map((category) => (
                   <div key={category} className="bg-gray-50 rounded-xl p-4">
                     <h3 className="text-sm sm:text-lg font-semibold text-gray-700 mb-4 capitalize">
-                      {category === "Accessories" ? "🎭" : category === "Cap" ? "🧢" : category === "Eyes" ? "👀" :
-                       category === "Foot" ? "🦶" : category === "Glasses" ? "👓" : category === "Hair" ? "💇" :
-                       category === "Mouth" ? "👄" : "👡"} {category}
+                      {category === "Accessories" ? "" : category === "Cap" ? "" : category === "Eyes" ? "" :
+                       category === "Foot" ? "" : category === "Glasses" ? "" : category === "Hair" ? "" :
+                       category === "Mouth" ? "" : ""} {category}
                     </h3>
 
                     {category === "Accessories" && selectedTraits.Accessories.length > 0 && (

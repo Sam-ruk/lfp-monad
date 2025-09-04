@@ -415,7 +415,7 @@ export default function Tracker() {
             {/* NFTs Table */}
             <div className="bg-gradient-to-br from-pink-900/60 via-purple-900/70 to-black/80 p-3 sm:p-4 rounded-xl shadow-[0_0_20px_#9333ea80] border border-pink-300/10 backdrop-blur">
               <h2 className="text-white text-lg sm:text-xl font-semibold mb-3 sm:mb-4 flex items-center gap-2">
-                <span>🎨</span>
+                <span></span>
                 <span className="hidden sm:inline">NFT Collections</span>
                 <span className="sm:hidden">NFTs</span>
               </h2>
@@ -499,7 +499,7 @@ export default function Tracker() {
             {/* DApps Table */}
             <div className="bg-gradient-to-br from-purple-900/60 via-pink-900/70 to-black/80 p-3 sm:p-4 rounded-xl shadow-[0_0_20px_#9333ea80] border border-purple-300/10 backdrop-blur">
               <h2 className="text-white text-lg sm:text-xl font-semibold mb-3 sm:mb-4 flex items-center gap-2">
-                <span>🖥️</span>
+                <span></span>
                 Apps / Infra
               </h2>
               

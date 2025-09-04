@@ -3,6 +3,12 @@ import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import Heading from './Heading'
+import { Patrick_Hand } from "next/font/google";
+
+const patrickHand = Patrick_Hand({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export default function Game() {
   const canvasRef = useRef(null);
@@ -53,24 +59,24 @@ export default function Game() {
 
   const mazeLayout = {
     layout: [
-      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-      [1,0,0,0,1,0,0,0,1,0,0,0,0,0,1],
-      [1,1,1,0,1,1,1,0,1,1,1,1,1,0,1],
-      [1,0,0,0,0,0,1,0,0,0,0,0,1,0,1],
-      [1,0,1,1,1,0,1,1,1,1,1,0,1,0,1],
-      [1,0,1,0,0,0,0,0,0,0,1,0,0,0,1],
-      [1,0,1,1,1,1,1,1,1,0,1,1,1,0,1],
-      [1,0,0,0,0,0,0,0,1,0,0,0,1,0,1],
-      [1,1,1,1,1,1,1,0,1,1,1,0,1,0,1],
-      [1,0,0,0,0,0,1,0,0,0,1,0,1,0,1],
-      [1,0,1,1,1,0,1,1,1,0,1,0,1,0,1],
-      [1,0,1,0,0,0,0,0,1,0,1,0,1,0,1],
-      [1,0,1,1,1,1,1,0,1,0,1,0,1,0,1],
-      [1,0,0,0,0,0,0,0,0,0,0,0,0,2,1],
-      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      [1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1],
+      [1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1],
+      [1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+      [1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1],
+      [1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1],
+      [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1],
+      [1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+      [1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+      [1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 2, 1, 0, 1],
+      [1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1],
+      [1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1],
+      [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ],
     start: { x: 1, z: 1 },
-    goal: { x: 13, z: 13 }
+    goal: { x: 11, z: 11 }
   };
 
   useEffect(() => {
@@ -835,7 +841,7 @@ const checkWalletStatus = async () => {
 };
 
   return (
-    <div className="font-['Orbitron']">
+    <div className={patrickHand.className}>
     
       <section id="game" className="">
         <Heading text="LFP MAZE GAME" className="mt-1 mb-1"/>
@@ -898,7 +904,7 @@ const checkWalletStatus = async () => {
                 {/* Start */}
                 <div className="text-center mt-4 sm:mt-6">
                   <button 
-                    className="bg-gradient-to-r from-[#d400ff] to-[#00ffcc] text-[#1a0033] font-black px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(212,0,255,0.8)] text-base sm:text-lg"
+                    className="bg-gradient-to-r from-[#d400ff] to-[#00ffcc] text-[#1a0033] font-black px-4 sm:px-6 py-2 sm:py-3 rounded-xl hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(212,0,255,0.8)] text-base sm:text-lg"
                     onClick={(e) => {
                       e.stopPropagation();
                       setShowIntro(false);
@@ -916,46 +922,94 @@ const checkWalletStatus = async () => {
           <canvas ref={canvasRef} className="w-full h-full" />
           
           {/* Control buttons */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#1e003c]/70 p-2 rounded-lg shadow-[0_0_20px_rgba(212,0,255,0.5)] flex flex-row gap-2">
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-[#1e003c]/70 p-2 rounded-lg shadow-[0_0_20px_rgba(212,0,255,0.5)] flex flex-row gap-1 select-none">
             <button
               id="tiltLeft"
               onMouseDown={() => handleButton('tiltLeft', true)}
               onMouseUp={() => handleButton('tiltLeft', false)}
-              onTouchStart={() => handleButton('tiltLeft', true)}
-              onTouchEnd={() => handleButton('tiltLeft', false)}
-              className="bg-[#d400ff]/20 border-2 border-[#d400ff] text-[#d400ff] px-3 py-1 md:px-4 md:py-2 rounded-md hover:bg-[#d400ff]/40 hover:scale-105 transition-all text-sm md:text-base"
+              onTouchStart={(e) => {
+                e.preventDefault();
+                handleButton('tiltLeft', true);
+              }}
+              onTouchEnd={(e) => {
+                e.preventDefault();
+                handleButton('tiltLeft', false);
+              }}
+              className="bg-[#d400ff]/20 border-2 border-[#d400ff] text-[#d400ff] p-1 min-w-[44px] min-h-[44px] rounded-md hover:bg-[#d400ff]/50 active:bg-[#d400ff]/60 hover:scale-110 active:scale-95 transition-all flex items-center justify-center"
             >
-              ⬅️
+              <img
+                src="/left.png"
+                alt="Left"
+                className="w-7 h-7 select-none"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+              />
             </button>
             <button
               id="tiltUp"
               onMouseDown={() => handleButton('tiltUp', true)}
               onMouseUp={() => handleButton('tiltUp', false)}
-              onTouchStart={() => handleButton('tiltUp', true)}
-              onTouchEnd={() => handleButton('tiltUp', false)}
-              className="bg-[#d400ff]/20 border-2 border-[#d400ff] text-[#d400ff] px-3 py-1 md:px-4 md:py-2 rounded-md hover:bg-[#d400ff]/40 hover:scale-105 transition-all text-sm md:text-base"
+              onTouchStart={(e) => {
+                e.preventDefault();
+                handleButton('tiltUp', true);
+              }}
+              onTouchEnd={(e) => {
+                e.preventDefault();
+                handleButton('tiltUp', false);
+              }}
+              className="bg-[#d400ff]/20 border-2 border-[#d400ff] text-[#d400ff] p-1 min-w-[44px] min-h-[44px] rounded-md hover:bg-[#d400ff]/50 active:bg-[#d400ff]/60 hover:scale-110 active:scale-95 transition-all flex items-center justify-center"
             >
-              ⬆️
+              <img
+                src="/up.png"
+                alt="Up"
+                className="w-7 h-7 select-none"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+              />
             </button>
             <button
               id="tiltDown"
               onMouseDown={() => handleButton('tiltDown', true)}
               onMouseUp={() => handleButton('tiltDown', false)}
-              onTouchStart={() => handleButton('tiltDown', true)}
-              onTouchEnd={() => handleButton('tiltDown', false)}
-              className="bg-[#d400ff]/20 border-2 border-[#d400ff] text-[#d400ff] px-3 py-1 md:px-4 md:py-2 rounded-md hover:bg-[#d400ff]/40 hover:scale-105 transition-all text-sm md:text-base"
+              onTouchStart={(e) => {
+                e.preventDefault();
+                handleButton('tiltDown', true);
+              }}
+              onTouchEnd={(e) => {
+                e.preventDefault();
+                handleButton('tiltDown', false);
+              }}
+              className="bg-[#d400ff]/20 border-2 border-[#d400ff] text-[#d400ff] p-1 min-w-[44px] min-h-[44px] rounded-md hover:bg-[#d400ff]/50 active:bg-[#d400ff]/60 hover:scale-110 active:scale-95 transition-all flex items-center justify-center"
             >
-              ⬇️
+              <img
+                src="/down.png"
+                alt="Down"
+                className="w-7 h-7 select-none"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+              />
             </button>
             <button
               id="tiltRight"
               onMouseDown={() => handleButton('tiltRight', true)}
               onMouseUp={() => handleButton('tiltRight', false)}
-              onTouchStart={() => handleButton('tiltRight', true)}
-              onTouchEnd={() => handleButton('tiltRight', false)}
-              className="bg-[#d400ff]/20 border-2 border-[#d400ff] text-[#d400ff] px-3 py-1 md:px-4 md:py-2 rounded-md hover:bg-[#d400ff]/40 hover:scale-105 transition-all text-sm md:text-base"
+              onTouchStart={(e) => {
+                e.preventDefault();
+                handleButton('tiltRight', true);
+              }}
+              onTouchEnd={(e) => {
+                e.preventDefault();
+                handleButton('tiltRight', false);
+              }}
+              className="bg-[#d400ff]/20 border-2 border-[#d400ff] text-[#d400ff] p-1 min-w-[44px] min-h-[44px] rounded-md hover:bg-[#d400ff]/50 active:bg-[#d400ff]/60 hover:scale-110 active:scale-95 transition-all flex items-center justify-center"
             >
-              ➡️
+              <img
+                src="/right.png"
+                alt="Right"
+                className="w-7 h-7 select-none"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable="false"
+              />
             </button>
           </div>
           
