@@ -422,7 +422,7 @@ const PFPs = () => {
                             }}
                           />
                           <div
-                            onClick={() => document.querySelector('input[type="color"]')?.click()}
+                            onClick={() => (document.querySelector('input[type="color"]') as HTMLInputElement)?.click()}
                             className="w-10 h-10 rounded-lg border-2 border-gray-200 cursor-pointer shadow-md"
                             style={{
                               background: backgroundColor,
