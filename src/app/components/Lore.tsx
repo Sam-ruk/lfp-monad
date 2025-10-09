@@ -40,49 +40,49 @@ const Lore = () => {
   }, []);
 
   // Wheel + touch swipe handling
-  useEffect(() => {
-    let lastScrollTime = 0;
+  // useEffect(() => {
+  //   let lastScrollTime = 0;
 
-    const handleWheel = (e: WheelEvent) => {
+  //   const handleWheel = (e: WheelEvent) => {
 
-      const now = Date.now();
-      if (now - lastScrollTime < 700) return;
-      lastScrollTime = now;
+  //     const now = Date.now();
+  //     if (now - lastScrollTime < 700) return;
+  //     lastScrollTime = now;
 
-      if (e.deltaY > 0 && currentSlide < slides.length - 1) {
-        setCurrentSlide((p) => p + 1);
-      } else if (e.deltaY < 0 && currentSlide > 0) {
-        setCurrentSlide((p) => p - 1);
-      }
-    };
+  //     if (e.deltaY > 0 && currentSlide < slides.length - 1) {
+  //       setCurrentSlide((p) => p + 1);
+  //     } else if (e.deltaY < 0 && currentSlide > 0) {
+  //       setCurrentSlide((p) => p - 1);
+  //     }
+  //   };
 
-    const handleTouchStart = (e: TouchEvent) => {
-      touchStartY.current = e.touches[0].clientY;
-    };
+  //   const handleTouchStart = (e: TouchEvent) => {
+  //     touchStartY.current = e.touches[0].clientY;
+  //   };
 
-    const handleTouchEnd = (e: TouchEvent) => {
-      if (touchStartY.current === null) return;
-      const delta = e.changedTouches[0].clientY - touchStartY.current;
+  //   const handleTouchEnd = (e: TouchEvent) => {
+  //     if (touchStartY.current === null) return;
+  //     const delta = e.changedTouches[0].clientY - touchStartY.current;
 
-      if (Math.abs(delta) > 50) {
-        if (delta > 0 && currentSlide > 0) setCurrentSlide((p) => p - 1);
-        if (delta < 0 && currentSlide < slides.length - 1) setCurrentSlide((p) => p + 1);
-      }
-      touchStartY.current = null;
-    };
+  //     if (Math.abs(delta) > 50) {
+  //       if (delta > 0 && currentSlide > 0) setCurrentSlide((p) => p - 1);
+  //       if (delta < 0 && currentSlide < slides.length - 1) setCurrentSlide((p) => p + 1);
+  //     }
+  //     touchStartY.current = null;
+  //   };
 
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("wheel", handleWheel, { passive: false }); 
-      container.addEventListener("touchstart", handleTouchStart, { passive: true });
-      container.addEventListener("touchend", handleTouchEnd, { passive: false });
-    }
-    return () => {
-      container?.removeEventListener("wheel", handleWheel);
-      container?.removeEventListener("touchstart", handleTouchStart);
-      container?.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, [currentSlide]);
+  //   const container = containerRef.current;
+  //   if (container) {
+  //     container.addEventListener("wheel", handleWheel, { passive: false }); 
+  //     container.addEventListener("touchstart", handleTouchStart, { passive: true });
+  //     container.addEventListener("touchend", handleTouchEnd, { passive: false });
+  //   }
+  //   return () => {
+  //     container?.removeEventListener("wheel", handleWheel);
+  //     container?.removeEventListener("touchstart", handleTouchStart);
+  //     container?.removeEventListener("touchend", handleTouchEnd);
+  //   };
+  // }, [currentSlide]);
 
   useEffect(() => {
     if (!doorsOpen) return;
@@ -93,11 +93,11 @@ const Lore = () => {
           if (prev >= slides.length - 1) return 0;
           return prev + 1;
         });
-      }, 12000);
+      }, 6000);
 
       // store interval cleanup inside timeout
       return () => clearInterval(interval);
-    }, 1000);
+    }, 2000);
 
     return () => clearTimeout(timeout);
   }, [doorsOpen, slides.length]);

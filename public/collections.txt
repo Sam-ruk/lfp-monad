@@ -6,7 +6,7 @@ Foggy,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.rese
 Foggy,https://x.com/foggyxyz,https://pbs.twimg.com/profile_images/1918425623426379776/hayazeCz_400x400.jpg,http://foggynft.xyz
 Foggy,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf%252B9v4h8VuiZo6yyppe2z83dtYvf%252FpvhA969qU%252FsEi%252FutefveF92%252FGmYw0jyxSQQDErX746RBsMts3c2%252FKndg0Nany2lIH4Ydy7rq%252Bth6NqLZ,"https://magiceden.io/collections/monad-testnet/0x0f2f2da004acc38f05858f9dbc0320db64c1b6c9"
 
-skrumpeys,https://x.com/skrumpeys,https://pbs.twimg.com/profile_images/1808946473888845825/NfreVmT4_400x400.jpg,skrumpey.xyz
+skrumpeys,https://x.com/skrumpeys,https://pbs.twimg.com/profile_images/1960829526910308352/zVaJAbUE_400x400.jpg,skrumpey.xyz
 Skrumpets,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2FxGIQsppdhx9jPELiWEASU%252FjUqyN30zbMlUWyRD8eC9mBC4Xx9S%252FMOnyJExVCFyjSd2mbq5cmkbR%252BjI1pJtmvMnm21z7MQpjYT8IxahQ%252BSQknrg%252F1OklbvJTs0Q4rc7gBCmt8I%252FdUU6K%252F%252FJErLfgzOw%253D%253D,"https://magiceden.io/collections/monad-testnet/0xe8f0635591190fb626f9d13c49b60626561ed145"
 DN,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2F7%252FrdF%252Fe%252F0iXY8HduhRCoIehkmFeXPeOQQFbbmIPfjCZjf9t5tDVPzz2ZINIWtGtRDw%252FZOzkMcktNvWqbPXTZcg3etlVIxofhCNArzTGIoFn5OEyoYf2q5MqtwQ8UphMJbp3WS5Puex0d3X2GUoULLwXfFj18LS54rJ3vIPN9YM8%253D,"https://magiceden.io/collections/monad-testnet/0x151cf400af08bca390b16582ed6c4f096e4f17eb"
 
@@ -55,13 +55,13 @@ Mecha Box Mint Pass,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A
 Chewy,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2FrSNTYhb5erNxjAvRIO43VgXzddRzWXfhG%252F15Qa2AQUXst%252BWKmPQ8zRLBH8ZMOW7IRO1UaQD%252F6Zne9%252FZjP8KNLSylkMlW%252Bg6TDDuYe95opcmSRiDjzxXQ6hh%252BaLirWB95fyaEOVEQ3iq0ntosfUfT4A%253D%253D,"https://magiceden.io/collections/monad-testnet/0x88bbcba96a52f310497774e7fd5ebadf0ece21fb"
 EGGcellent,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf7g0IVTuYjOYtMIeq1DGOyNJoaVbKK4WWm40bDUDjgHnaxMySZVLdj0vU%252B2Tazk2ot4L8Jw2pnkG3RY3yuwjNWtrjrZN5WvcoUtlGeuw40ND,"https://magiceden.io/collections/monad-testnet/0x7da93750de078bfbbab0dd30635448e9ec7fb8f0"
 
-La Mouch,https://x.com/LaMouchNFT,https://pbs.twimg.com/profile_images/1883532992162795520/TbSr-Wag_400x400.jpg,https://lamouch.xyz/
+La Mouch,https://x.com/LaMouchNFT,https://pbs.twimg.com/profile_images/1974602989735235584/gm5ij753_400x400.jpg,https://lamouch.xyz/
 LaMouch x Fantasytop Pass,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvfzZLX4n%252BWPHO%252BsqAhv0hCzSe%252F9CLh%252BVwx0k%252BfjSYqEXbwJkOyB2WYCZK24jtJlNkSO7%252F0mFvo%252BnhW0QxoReK4Rxdz5hzsSzOefBDFaCugZQQ,"https://magiceden.io/collections/monad-testnet/0x4bac889f20b9de43734f15379096c98f34154c50"
 LaMouchNFT,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fhc%252BnPcLmWxs%252FDW99DlBQ42k40ZoyYV5jCIms5qHjwvswC0zr%252BNgXbN8GZEYwrKJrA62Wf7ZMu3%252BeAKx%252Fjze3bRrJt34jiDpBG7szFi9vhfYmlH1vDK0HEVpPW26HsAMHfUHWCHyTWq%252FGzQaYrtR5otyeGrReziPWmeD6UtEWBWAwhn3ojJINO6thM9xh1EsFHvmRBFJMilTyP2TK41D%252FtQ%253D%253D,"https://magiceden.io/collections/monad-testnet/0x800f8cacc990dda9f4b3f1386c84983ffb65ce94"
 La Mouch,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf9OPJh7tCuXRZDYuSJL3tyM3SjCieyBx56WB10lFt4fPSvid19uFH7z7p36FEByplsCxUVBezmHHfa%252F31jivjHph3W4vahUwis1xOIHwMftT,"https://magiceden.io/collections/monad-testnet/0x5a21b0f4a4f9b54e16282b6ed5ad014b3c77186f"
 EGGcellent,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf7g0IVTuYjOYtMIeq1DGOyNJoaVbKK4WWm40bDUDjgHnaxMySZVLdj0vU%252B2Tazk2ot4L8Jw2pnkG3RY3yuwjNWtrjrZN5WvcoUtlGeuw40ND,"https://magiceden.io/collections/monad-testnet/0x7da93750de078bfbbab0dd30635448e9ec7fb8f0"
 
-Monshape Club,https://x.com/Monshape,https://pbs.twimg.com/profile_images/1924060588335869952/eLkvygQY_400x400.jpg,https://monshape.club
+Monshape Club,https://x.com/Monshape,https://pbs.twimg.com/profile_images/1968738895388135424/CpP76kJf_400x400.jpg,https://monshape.club
 Monshape x Fantasy WL Pass,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2F%252BF4uAprNqLw%252FUAbX2wIMCPo2oDmYoowRNh301apULXgncrR1JX4EfAXeQZ393jMHN0GbAya54RycTjM4YxsA2x8%252Bgx0tyPFeahrY5%252FS8gumvtulyfxlbuCwezY5r1t%252Btkx1qbZ8x1b0A1t7omnYGtA%253D%253D,"https://magiceden.io/collections/monad-testnet/0x977b9b652dcd87e5fbdb849b12ab63a6bb01ac05"
 Monshape Hopium,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf5OgR%252FoHbMjC9I2Khwfct%252FRRa5MMUHsdgfxBK21xbV7ZtUyTpeM9rapeHiB4xRgq5YBUMddMH2Xwj74ChTezVCTbP7cCPlUOzUNvFahm1FyX,"https://magiceden.io/collections/monad-testnet/0x69f2688abe5dcde0e2413f77b80efcc16361a56e"
 
@@ -80,7 +80,7 @@ RealNads,https://x.com/RealNadsClub,https://pbs.twimg.com/profile_images/1888607
 RealNads Premint Pass,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2FxGIQsppdhx9jPELiWEASU%252Fr%252BdV2p5x5QjIN129jfuzvDBS2PfpczCV0opp6bVNPi0kx47ooTHStB7hvG0omdwouMDHFsOk7Px7G%252FC5PolQ4h%252BvDpNGywt%252F%252BMrrXeTo%252Bxa2OorkOHUa9pRgHING2Lng%253D%253D,"https://magiceden.io/collections/monad-testnet/0xb981a81b45f604f82bd502a35c6dbe25dd2e8b8d"
 RealNadsClub,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf2nA16WC3MJuPTu%252BAIP88Hqz1tD6q6hMRpPPNMXJEekAfpny31D2CJBM05Ctn8FbWszFKaV7WG7QNuwprn45YYG4lPTxLAsV69b2ppvG4s88,"https://magiceden.io/collections/monad-testnet/0x0bbf4a69f5e20ddf2244add5fc412b9631a2cba1"
 
-llamao,https://x.com/llamao_,https://pbs.twimg.com/profile_images/1949764020241895424/FijMsNPa_400x400.jpg,https://bento.me/llamao
+llamao,https://x.com/llamao_,https://pbs.twimg.com/profile_images/1958828007436820483/uhmooaWN_400x400.jpg,https://bento.me/llamao
 Llamao x Fantasy Top,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2F%252BF4uAprNqLw%252FUAbX2wIMCJIMwbejN%252FoO7snHF6gtisMtduIqmLVxLJ8xGvpSY%252FV9pxAGosguWtiYiQd%252F36SCQ53GLSq5C8JlkGm5%252Fn4A5mULaig4z9UPo0CMwh6%252BJATHNMTklNRmxynXjbt%252BUSYu%252Bw%253D%253D,"https://magiceden.io/collections/monad-testnet/0x38f3730b009ec1707f5409caf44e329cc7b4d050"
 Llamao Genesis,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2F%252F5Jbi0Ns6zow6QFNdglhEnJUv2wTT%252FWW6GnxkyLrs%252FIimEWlwLiDTwUgY0HYwfw%252BIRF5i3W1d1BDoHIVhBC6BNzsEk6m%252Bw1Aw%252B%252BW4iTPqHRlkecgGZ3psG8uLQNtLuIZWOEuytZ01EKZVsgiIXAwoQ%253D%253D,"https://magiceden.io/collections/monad-testnet/0xb0a663cf4853e67221fee43322fda402e21debfc"
 
@@ -93,7 +93,7 @@ Wonad Shovel Card,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2
 Wonad Soil Card,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf0eA4Go32TFnYzps6iPGJk03zFf7u9jpaEhNZ5apSJgO5iH5p4yIZa8OUbLnsbaafaF6r7l0%252BpYpaWUfbN4h8MrfIbwtkDswX0c2hqq0BUI8,"https://magiceden.io/collections/monad-testnet/0x33cafd437816eb5aafe2b2e7bedf82a3d8d226e7"
 Wonad Life Card,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf0n2F0dmlxv4XwzclwsfNUthgTPhh5EUYx%252BveN1apaPjWFORuSE1QDiFwcl3gXjdod0BOZ2NTFgUe4FOgFWHzaprYOcgm%252B358c893aAfbHVg,"https://magiceden.io/collections/monad-testnet/0x2445db24ce058a63b47f75c46906c2e365d39f4a"
 
-Coronad,https://x.com/Coronad_xyz,https://pbs.twimg.com/profile_images/1918604302526156800/ybgiZonT_400x400.jpg,
+Coronad,https://x.com/Coronad_xyz,https://pbs.twimg.com/profile_images/1960360500065337344/ixhau0qf_400x400.jpg,
 Scroll of Coronation,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2FgHTKSzFx0LtiQ%252F9Ps%252BvNeVgBFAztuwXodw2%252BCjKTPZz652KFwF9YgjS5bGJ8IJ144h5QFfNT8vhI5nQVhIezKEC7E6XoDwFfbKVClWbWRqAdk4A30zhPXowGIQhveLpIkVV39gA6OXxS2vltx2C8kQPUFteNy8YVENrWdYD5KXU1BWnmTIQYU4AaQfyZN8GP,"https://magiceden.io/collections/monad-testnet/0x4fcf36ac3d46ef5c3f91b8e3714c9bfdb46d63a3"
 Coronad GTD Pass,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvfwROYm2dh3S9Yi38K%252FwUZ7x4hu9re%252FsVWw58lK4x6T5QQcopIztQO6dg64XOJyBzOQXoOBPwVjjVdLcztXStn3CFRIBIIZQOwmZofEOLU7eT,"https://magiceden.io/collections/monad-testnet/0x7260fe3d8f5b2accde605852423a902d7f5314ce"
 
@@ -101,7 +101,7 @@ Monadsters,https://x.com/Monadsters,https://pbs.twimg.com/profile_images/1896503
 Mutated Monadsters,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2FrSNTYhb5erNxjAvRIO43Vr%252BZ1LStI1VoQ4P5ib1oQfF0cfuED5GwnAPxgJIHrOq%252B2mJ2v%252FM%252FzxGnt47FKNK6P7ArSDUDr%252BvBL%252Bz6s%252FJHQ4xxpNukZ7BVehyZuKrA8rjhRe%252FWXwF8%252BPOFhp9wFDiSHA%253D%253D,"https://magiceden.io/collections/monad-testnet/0x7ea266cf2db3422298e28b1c73ca19475b0ad345"
 Monadsters,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf9newpCRn5hxMbMd%252BKn6FLn%252FPLTukEDRlJ0HEkula7skxwtiV64p%252BmcRSfaFg%252BOH7qvcRRkvQQcRdlRRMl5PNp%252B7JzYhRFBKGmTQHQsLRB8s,"https://magiceden.io/collections/monad-testnet/0x3d9a466589a3a57327294185b15789ddd22fe081"
 
-Mon Beans,https://x.com/MonBeans,https://pbs.twimg.com/profile_images/1903960912303640576/o2ATs5LP_400x400.jpg,https://monbeans.xyz/
+Mon Beans,https://x.com/MonBeans,https://pbs.twimg.com/profile_images/1965031230195253248/cOwDPblN_400x400.jpg,https://monbeans.xyz/
 Mon Beans,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf5BGoTbjy2PsFYWUuisiJF%252Fpqb%252Fv6blBWIzLiR0LhQBN%252FA3OREL382D%252BI0A%252B1fIPC8ZhKGxzPwF5m5Y8m8fW9D3psSEFideKB8t9ayeF8EuE,"https://magiceden.io/collections/monad-testnet/0x6aa4872ab4e0fdf078efd17acd45b6352f47c39c"
 
 «Monadroids»,https://x.com/monadroids,https://pbs.twimg.com/profile_images/1898327370928422912/dS3M0Elj_400x400.jpg,monadroids.xyz
@@ -115,7 +115,7 @@ Monadoon,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.r
 OwlsMonad,https://x.com/Owls_nft_,https://pbs.twimg.com/profile_images/1876831188217741313/8aYwKgPM_400x400.jpg,https://linktr.ee/owlsmonad
 OwlsMonad,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf2VnKTVl6x%252Frsms80e8oGtPmJMu4ikblgJuUYxWy7pnf014jIKxCk7qncC7UDSAcWo9hkHPeNnbC4HSVakhrEC2TzbRLPlXDYtwHIGDXPL1N,"https://magiceden.io/collections/monad-testnet/0x869650871ebcc881faaf191b70f810abb66a1b5a"
 
-Monadians,https://x.com/monadians_xyz,https://pbs.twimg.com/profile_images/1739215796738326528/XxFqmbpF_400x400.jpg,monadians.xyz
+Monadians,https://x.com/luckymonkeyss,https://pbs.twimg.com/profile_images/1971208428707028992/wghCtGnA_400x400.jpg,monadians.xyz
 Zaros x Monadians,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf0vl4r8CSB%252BubtB2EmKxhTW1%252Bn9515mK5kKpjsDoNKdxytvU%252FKABKPAMULcHjnEWgcDckQiLe43tZZFdunc%252B1opIkTz9ZgmHbTq3XZkj8J5w,"https://magiceden.io/collections/monad-testnet/0x9d0746e57de816f2b404d80d925621cfb1ce7e95"
 Momo,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2FO1GmUbX%252FvNODx2ebXhWa19n%252B3QXcBnyReiJKN0LMCK%252BaSWHqhmpi0TS%252Byxh%252B4NLj64kjii7PMeGj74UCZb58ICKL2kiEGcMoc3X1aCfHpuf6G4%252B7%252BjdAeSQY%252FGZAEnZUBsIg%252BA18BVw1%252Ffz%252FBQFRGw%253D%253D,"https://magiceden.io/collections/monad-testnet/0xbc8f6824fde979848ad97a52bced2d6ca1842a68"
 EGGcellent,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf7g0IVTuYjOYtMIeq1DGOyNJoaVbKK4WWm40bDUDjgHnaxMySZVLdj0vU%252B2Tazk2ot4L8Jw2pnkG3RY3yuwjNWtrjrZN5WvcoUtlGeuw40ND,"https://magiceden.io/collections/monad-testnet/0x7da93750de078bfbbab0dd30635448e9ec7fb8f0"
@@ -123,22 +123,22 @@ EGGcellent,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg
 Frico,https://x.com/frico_xyz,https://pbs.twimg.com/profile_images/1881380166045253632/JWCZEsdr_400x400.jpg,https://friconft.xyz/
 Frico Wheel,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvfzGFn9PwRqGURwoTkjYdv7x7UKajl0cGNl0pq8Xx6y9hNn%252Bcco9g4%252BzE5yH0wxZ%252FkrItkfVUXMlUcWKJ9hHxVLKbM3CYhdfD9U3WtmJGC1PI,"https://magiceden.io/collections/monad-testnet/0x221b07cc8989e41c987c81a5c8626df45a4e2c02"
 
-DarkChain Legion,https://x.com/DarkMonadNFT,https://pbs.twimg.com/profile_images/1937876113985802240/D8V7ugcF_400x400.jpg,https://www.darkmonad.com/
+DarkChain Legion,https://x.com/DarkMonadNFT,https://pbs.twimg.com/profile_images/1965481692812165120/E0mYVG82_400x400.jpg,https://www.darkmonad.com/
 Dark Monad,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf%252BrcbBETgs2NXzVeod16UcDxwZZCwEnpAapYq0TLGXfB2SWbRKh1NxjZts7G3MTgVBkCm1XNzAgg0IwRS2kbEkPacO8CSjxCEim2krGhue9p,"https://magiceden.io/collections/monad-testnet/0x0116c2087e4a940694c16b73433f0d2d308ab7a4"
 
-Meco,https://x.com/MecoNads,https://pbs.twimg.com/profile_images/1936151775507042304/_kaS8Abk_400x400.jpg,gmon.link/meco-nads
+Meco,https://x.com/MecoNads,https://pbs.twimg.com/profile_images/1955672300344524800/RRSM5CdL_400x400.jpg,gmon.link/meco-nads
 Meco Nads,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2FNyqHXaXLVWt2tcd8gefKXhtzM0Nknr2xHw2IU%252BJXLJEuSiM32RvY9at2hqge9s8axdPyM6AWQqI5ZEX2s1c8Yw%253D%253D,"https://magiceden.io/collections/monad-testnet/0x8af130613bd8a7c714a43def3454a0f5ddf2344e"
 
 CANZ (evm/acc),https://x.com/canz_xyz,https://pbs.twimg.com/profile_images/1951300555705376769/HMQmDrbW_400x400.jpg,
 Canz,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvfyyA5OjvOvCltPHiboNQYUCc9868KMOPGHOLy1GHVXI0rJ6za0noBk%252FnfMZRZKI6Ui%252BobFpWzgPIPNcmRAQjVZi19WAqFivXDUCZx1PowifJ,"https://magiceden.io/collections/monad-testnet/0xf79203fc06f9fcc7d48866cb7e8b8b56cd44e3b5"
 
-Chrononad 🧭,https://x.com/chrononad_xyz,https://pbs.twimg.com/profile_images/1875497152274698240/awGGZwMN_400x400.jpg,https://medium.com/@chrononad
+Chrononad 🧭,https://x.com/chrononad_xyz,https://pbs.twimg.com/profile_images/1969404998845919232/T6Im9Apb_400x400.jpg,https://medium.com/@chrononad
 Chrononad WL Pass,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf%252FYmQE5SKtoTMk1jfMbQbOV0am0IP4fB%252FdxXJNEuOfNibc%252Bz3loNY8JRdWQhfxqfzMVAwojH7LqgkRhxYh2JGdWT9nufxGSuSrJpBd0Gf7U0nGFxuoBuoAzwfNa7pR%252FcZQ%253D%253D,"https://magiceden.io/collections/monad-testnet/0x0d55d4b1754434929eed0357226450f26546efa4"
 
 BOBR_XYZ,https://x.com/Bober_xyz,https://pbs.twimg.com/profile_images/1947913703686295552/Cukkra3n_400x400.jpg,
 BOBR,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf6CtmqCtlttAaqp67O7fOuu5R1KvplXAkymLbb6Ia1dQE0FUHcsBaRTcmVGLS3NB5jb9u%252BWKvngsXu3GOVe8uo%252FONlhcWSfaoSZYOAZ7JRE7,"https://magiceden.io/collections/monad-testnet/0x3ff5ab5eea49d25ab00b532e9e50b17d5218068c"
 
-Spiky Nads 🟪,https://x.com/spikynads,https://pbs.twimg.com/profile_images/1952740534725779456/dOZzpQ-q_400x400.jpg,
+Spiky Nads 🟪,https://x.com/spiky_xyz,https://pbs.twimg.com/profile_images/1968982501130473472/3UWd1AwV_400x400.jpg,
 Spikes,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf0aTPGa7dMbaoJpVINCUIuTbYpz%252FAM0ZI38bbmW5peeVIgH4fvhO%252Fqgc3c%252Bvqag4utIVFcylE0oHY%252Bz0sS4qeqGr1xW%252BSbXlJkImE0K8ke9V5W54iuvOLtY6FXTTK4A8kQ%253D%253D,"https://magiceden.io/collections/monad-testnet/0x87e1f1824c9356733a25d6bed6b9c87a3b31e107"
 Spike It Up,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf7KBbgAvS1Ipraay8rddiNn8c5IqLkc5jUDT0Ygsu4fPbXk%252BEyC4XT1qZJAX2%252F7hlu9KHYyBALjJAtXLTT6girREllZMO57EYbYbGnEMaSVU,"https://magiceden.io/collections/monad-testnet/0x9e4339d4d36bac6747e4e42e85e39cd1e2c58a1f"
 
@@ -161,7 +161,7 @@ Hell Of Steve,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2F
 OctoNads 🐙,https://x.com/OctoNads,https://pbs.twimg.com/profile_images/1895511038063489024/_uOw0SxD_400x400.png,https://octonads.xyz/
 OCTONADS OCTOG PASS,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvfz%252FRtpSfYkUQgyuckXmxGPedaq8fc1ugMCFpoehqSDMKgeQHZzWPTRmebcG2VFtLKw2X3R1hpGmxPB3KlPOACp3szax5u93vISCtJ0yhuSMV,"https://magiceden.io/collections/monad-testnet/0xce49fc8ad0618931265a7cc6d859649af92a9d03"
 
-Monzilla,https://x.com/monzillanad,https://pbs.twimg.com/profile_images/1913305162204237824/giC5-0T7_400x400.jpg,
+Monzilla,https://x.com/monzillanad,https://pbs.twimg.com/profile_images/1957725909785669635/wwEIuro3_400x400.jpg,
 Monzilla,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf8A%252BBcGvRCbdbgycA4IpwYC%252FWpO9bvnPV1QrY1GQWFmH%252Fn1aPax7ZVqEo5OQ0vni2vqligAEU8wd8GiN52H6up%252BJdK060t0Uj3y2Gd80iAMy,"https://magiceden.io/collections/monad-testnet/0xbb3d692d5207782cd2de0aa10d911c9c05770cf8"
 
 Monk,https://x.com/monks_xyz,https://pbs.twimg.com/profile_images/1916651770203533312/flYUlLi0_400x400.jpg,
@@ -236,7 +236,7 @@ Samsara,https://img-cdn.magiceden.dev/rs:fill:400:0:0/plain/https%3A%2F%2Fimg.re
 Monalotls | FREE MINT,https://x.com/Monalotls,https://pbs.twimg.com/profile_images/1889298757717553152/qKRqfbwq_400x400.jpg,
 Monalotl Juice,https://img-cdn.magiceden.dev/rs:fill:400:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf1XhAnldOcF1qxY8Tva4RYqnuAsu85I0J1ydDqZAv9bNR6iRtigNn5P81zlJIcEjJGOHQkQbsJKgPIDKBtFwDa7WdMwFGBDcXKFjuwZhGsJwAtfk6w6OPZWi1r6%252FH1EeXQ%253D%253D,"https://magiceden.io/collections/monad-testnet/0x3c40bc55b338f6840df63dfe0ea09a532fbd6157"
 
-Rebels,https://x.com/rebels_xyz,https://pbs.twimg.com/profile_images/1917133725453684737/SOYkuIMI_400x400.jpg,
+Rebels,https://x.com/rebels_xyz,https://pbs.twimg.com/profile_images/1964412307879903232/61W6h_yb_400x400.jpg,
 The Rebels,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf3nUkR4W%252FCx5ag4%252B9vgAlodPp83SF%252B5NpoeeumKX1CYzMrQdnwx5jBvFY%252BptjvrT5sot%252FeUwEF%252BIT0IK6ltRAfeK9mnKlZ7qUDmHeO9Cy8Mt,"https://magiceden.io/collections/monad-testnet/0xfe9ca7cd65df66b4c34a245ccd0983558c161858"
 
 🟣 Scratchable Monads 🟣,https://x.com/scratchablemon,https://pbs.twimg.com/profile_images/1922639173795598336/rXbhjwnd_400x400.jpg,
