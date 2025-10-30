@@ -1,6 +1,5 @@
 Accountable,App,https://x.com/AccountableData,https://game.accountable.capital/,https://cdn.prod.website-files.com/669ade140a683001b9f7fd78/67b9109d10f685d8b168f7ea_Accountable_logo.webp,"DeFi|RWA"
 Amertis,App,https://x.com/AmertisExchange,https://amertis.exchange/,https://cdn.prod.website-files.com/669ade140a683001b9f7fd78/67cb75a41f9084980878c240_amertis_logo.webp,"DeFi"
-Apriori,App,https://x.com/apr_labs,http://testnet-staking.apr.io,https://cdn.prod.website-files.com/669ade140a683001b9f7fd78/67b91139ebe3a25cc1bbc74f_Apriori_logo.webp,"DeFi"
 Atlantis,App,https://x.com/atlantisdex_xyz,https://atlantisdex.xyz,https://cdn.prod.website-files.com/669ade140a683001b9f7fd78/67d3a0a71b288e2e961f005f_400x400.webp,"DeFi|AI"
 Bean Exchange,App,https://x.com/Bean_DEX,https://bean.exchange/,https://cdn.prod.website-files.com/669ade140a683001b9f7fd78/67b9118b1f770571ff12b289_Bean%20Exchange_logo.webp,"DeFi|Prediction Market"
 Breath of Estova,App,https://x.com/BreathOfEstova,https://www.breathofestova.com/,https://cdn.prod.website-files.com/669ade140a683001b9f7fd78/687816c09a34ff481b1be028_estova%20logo%20_400x400.webp,"Gaming"
