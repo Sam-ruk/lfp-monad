@@ -17,12 +17,12 @@ const Team = () => {
     { name: "Alex", url: "https://x.com/velicko_aleksej", image: "https://pbs.twimg.com/profile_images/1960224532792279040/Vydrw-G3_400x400.jpg", role: "" },
     { name: "Arkar", url: "https://x.com/CoCa14740177", image: "https://pbs.twimg.com/profile_images/1935776785154629632/6miKh8xb_400x400.jpg" },
     { name: "Ihsan", url: "https://x.com/ihsan00333", image: "https://pbs.twimg.com/profile_images/1926024164449656833/c9S49fMr_400x400.jpg", role: "" },
-    { name: "Max", url: "https://x.com/UmarovMax", image: "https://pbs.twimg.com/profile_images/1951352387584524288/SvTTCCAK_400x400.jpg", role: "" },
+    { name: "Samk", url: "https://x.com/Samruddhi_Krnr", image: "https://pbs.twimg.com/profile_images/1945152698141302785/ZP26FPc5_400x400.jpg", role: "" },
     { name: "Ayden", url: "https://x.com/omo_oshodi_", image: "https://pbs.twimg.com/profile_images/1933142661570908160/W3xewV5T_400x400.jpg", role: "" }
   ];
 
   const helpers = [
-    { name: "Samk", url: "https://x.com/Samruddhi_Krnr", image: "https://pbs.twimg.com/profile_images/1945152698141302785/ZP26FPc5_400x400.jpg", role: "" },
+    { name: "Max", url: "https://x.com/UmarovMax", image: "https://pbs.twimg.com/profile_images/1951352387584524288/SvTTCCAK_400x400.jpg", role: "" },
     { name: "San", url: "https://x.com/SANTHOSH12004", image: "https://pbs.twimg.com/profile_images/1939393858732982272/q97VSuQh_400x400.jpg", role: "" },
     { name: "Ade", url: "https://x.com/DayoKeem", image: "https://pbs.twimg.com/profile_images/1938264668524470272/fXumrdZz_400x400.jpg", role: "" },
     { name: "Sen", url: "https://x.com/senqieee28", image: "https://pbs.twimg.com/profile_images/1932968827224231936/P4-a5jjG_400x400.jpg", role: "" },
