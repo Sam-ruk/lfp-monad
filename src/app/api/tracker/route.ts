@@ -3,9 +3,9 @@ import { NextResponse } from 'next/server';
 
 interface TrackerData {
   id: string;
-  nft_today: number[];
+  nft: number[];
   nft_change: number[];
-  dapp_today: number[];
+  dapp: number[];
   dapp_change: number[];
   last_updated: Date;
 }
@@ -29,9 +29,9 @@ export async function GET(): Promise<NextResponse> {
     }
 
     return NextResponse.json({
-      nft_today: trackerData.nft || {},
+      nft: trackerData.nft || {},
       nft_change: trackerData.nft_change || {},
-      dapp_today: trackerData.dapp || {},
+      dapp: trackerData.dapp || {},
       dapp_change: trackerData.dapp_change || {},
       last_updated: trackerData.last_updated,
     });
