@@ -65,7 +65,7 @@
 	Monshape x Fantasy WL Pass,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2F%252BF4uAprNqLw%252FUAbX2wIMCPo2oDmYoowRNh301apULXgncrR1JX4EfAXeQZ393jMHN0GbAya54RycTjM4YxsA2x8%252Bgx0tyPFeahrY5%252FS8gumvtulyfxlbuCwezY5r1t%252Btkx1qbZ8x1b0A1t7omnYGtA%253D%253D,"https://magiceden.io/collections/monad-testnet/0x977b9b652dcd87e5fbdb849b12ab63a6bb01ac05"
 	Monshape Hopium,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf5OgR%252FoHbMjC9I2Khwfct%252FRRa5MMUHsdgfxBK21xbV7ZtUyTpeM9rapeHiB4xRgq5YBUMddMH2Xwj74ChTezVCTbP7cCPlUOzUNvFahm1FyX,"https://magiceden.io/collections/monad-testnet/0x69f2688abe5dcde0e2413f77b80efcc16361a56e"
 
-	blench,https://x.com/blench,hhttps://pbs.twimg.com/profile_images/1975335459552108544/gwBSJuzw_400x400.jpg,
+	blench,https://x.com/blench,https://pbs.twimg.com/profile_images/1975335459552108544/gwBSJuzw_400x400.jpg,
 	Blench Pass,https://img-cdn.magiceden.dev/rs:fill:128:0:0/plain/https%3A%2F%2Fimg.reservoir.tools%2Fimages%2Fv2%2Fmonad-testnet%2Fi9YO%252F4yHXUdJsWcTqhqvf9a39%252FcEoEcwFg9osliSM37qoAKUaf49H6HUkQkKr7pqxjw4z%252B3YvLr06Xl4LWRTbnTobVwd6ZYy22hR8SSy9rZoj8BCHLoxcVwCJaeqkbDW.mp4,"https://magiceden.io/collections/monad-testnet/0x46c66c40711a2953d1768926e53134c7ab272cd5"
 
 	Purple Frens,https://x.com/Purple_Frens,https://pbs.twimg.com/profile_images/1810339669412089856/VC3vXIXn_400x400.jpg,https://www.purplefrens.xyz/
