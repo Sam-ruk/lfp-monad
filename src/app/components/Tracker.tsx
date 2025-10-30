@@ -266,30 +266,53 @@
           let dappDataMap = new Map();
           
           if (trackerData && trackerData.nft) {
-            const nftFollowers = trackerData.nft.split(',').map(Number);
-            const nftChanges = trackerData.nft_change.split(',').map(Number);
-            
+            let nftFollowers: number[] = [];
+            let nftChanges: number[] = [];
+
+            // Handle new object-based data
+            if (typeof trackerData.nft === 'object' && !Array.isArray(trackerData.nft)) {
+              const nftEntries = Object.values(trackerData.nft);
+              const changeEntries = Object.values(trackerData.nft_change || {});
+              nftFollowers = nftEntries.map((v) => Number(v) || 0);
+              nftChanges = changeEntries.map((v) => Number(v) || 0);
+            } 
+            // Handle old CSV string-based data
+            else if (typeof trackerData.nft === 'string') {
+              nftFollowers = trackerData.nft.split(',').map(Number);
+              nftChanges = (trackerData.nft_change || '').split(',').map(Number);
+            }
+
             collectionsData.forEach((item, index) => {
               const handle = extractHandle(item.xLink);
               if (handle && nftFollowers[index] !== undefined) {
                 nftDataMap.set(handle.toLowerCase(), {
                   followers: nftFollowers[index] || 0,
-                  change: nftChanges[index] || 0
+                  change: nftChanges[index] || 0,
                 });
               }
             });
           }
           
           if (trackerData && trackerData.dapp) {
-            const dappFollowers = trackerData.dapp.split(',').map(Number);
-            const dappChanges = trackerData.dapp_change.split(',').map(Number);
-            
+            let dappFollowers: number[] = [];
+            let dappChanges: number[] = [];
+
+            if (typeof trackerData.dapp === 'object' && !Array.isArray(trackerData.dapp)) {
+              const dappEntries = Object.values(trackerData.dapp);
+              const changeEntries = Object.values(trackerData.dapp_change || {});
+              dappFollowers = dappEntries.map((v) => Number(v) || 0);
+              dappChanges = changeEntries.map((v) => Number(v) || 0);
+            } else if (typeof trackerData.dapp === 'string') {
+              dappFollowers = trackerData.dapp.split(',').map(Number);
+              dappChanges = (trackerData.dapp_change || '').split(',').map(Number);
+            }
+
             dappsData.forEach((item, index) => {
               const handle = extractHandle(item.xLink);
               if (handle && dappFollowers[index] !== undefined) {
                 dappDataMap.set(handle.toLowerCase(), {
                   followers: dappFollowers[index] || 0,
-                  change: dappChanges[index] || 0
+                  change: dappChanges[index] || 0,
                 });
               }
             });
