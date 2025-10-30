@@ -19,31 +19,29 @@ export async function GET(): Promise<NextResponse> {
     } as MongoClientOptions);
     await client.connect();
 
-    const db: Db = client.db('LFP');
-    const collection: Collection<TrackerData> = db.collection('Tracker');
+    const db: Db = client.db("LFP");
+    const collection: Collection<TrackerData> = db.collection("Tracker");
 
-    const trackerData: TrackerData | null = await collection.findOne({ id: 'tracker_data' });
+    const trackerData = await collection.findOne({ id: "tracker_data" });
 
     if (!trackerData) {
-      return NextResponse.json({ nft: [], dapp: [] });
+      return NextResponse.json({ nft: {}, dapp: {} });
     }
 
     return NextResponse.json({
-      nft_today: trackerData.nft_today,
-      nft_change: trackerData.nft_change,
-      dapp_today: trackerData.dapp_today,
-      dapp_change: trackerData.dapp_change,
+      nft_today: trackerData.nft || {},
+      nft_change: trackerData.nft_change || {},
+      dapp_today: trackerData.dapp || {},
+      dapp_change: trackerData.dapp_change || {},
       last_updated: trackerData.last_updated,
     });
-  } catch (error: unknown) {
-    console.error('Error fetching tracker data from MongoDB:', error);
+  } catch (error) {
+    console.error("Error fetching tracker data:", error);
     return NextResponse.json(
-      { error: 'Failed to fetch tracker data' },
+      { error: "Failed to fetch tracker data" },
       { status: 500 }
     );
   } finally {
-    if (client) {
-      await client.close();
-    }
+    if (client) await client.close();
   }
 }
